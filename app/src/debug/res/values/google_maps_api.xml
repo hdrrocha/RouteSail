@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=36:83:39:31:78:E8:7A:E3:37:9A:65:12:81:8E:BE:31:24:F3:06:80%3Bcom.example.helderrocha.routesail
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    36:83:39:31:78:E8:7A:E3:37:9A:65:12:81:8E:BE:31:24:F3:06:80
+
+    SHA-1 certificate fingerprint:
+    36:83:39:31:78:E8:7A:E3:37:9A:65:12:81:8E:BE:31:24:F3:06:80
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAd2E08BeV4j8KHF4zNaRtCw18uT77TX1U</string>
+</resources>
