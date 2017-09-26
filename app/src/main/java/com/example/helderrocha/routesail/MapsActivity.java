@@ -159,10 +159,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         map = googleMap;
         // Initializing
         markerPoints = new ArrayList<LatLng>();
-        LatLng sydney = new LatLng(-33.852, 151.211);
+        LatLng santaCatarina = new LatLng(-27.8347002, 48.5302277);
 //        googleMap.addMarker(new MarkerOptions().position(sydney)
 //                .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(santaCatarina));
 
         googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
 
