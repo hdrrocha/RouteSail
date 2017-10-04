@@ -10,6 +10,11 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -37,6 +42,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap map;
     //    GoogleMap map;
     ArrayList<LatLng> markerPoints;
+    private AutoCompleteTextView mEditRotas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +50,25 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_maps);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        mEditRotas = findViewById(R.id.rotas);
         mapFragment.getMapAsync(this);
 
+        final String[] rotas = new String[]{"Rota da banana","Rota da maçã"};
 
+        ArrayAdapter<String> adapterRotas = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, rotas);
+        mEditRotas.setAdapter(adapterRotas);
 
+        mEditRotas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(MapsActivity.this, rotas[i], Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     private String getDirectionsUrl(LatLng origin, LatLng dest) {
