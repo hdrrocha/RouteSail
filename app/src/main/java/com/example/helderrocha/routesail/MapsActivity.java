@@ -1,26 +1,26 @@
 package com.example.helderrocha.routesail;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.pm.PackageManager;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
+import com.example.helderrocha.routesail.models.Aresta;
+import com.example.helderrocha.routesail.models.NoMaritmo;
+import com.example.helderrocha.routesail.models.Rotas;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -44,6 +44,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     ArrayList<LatLng> markerPoints;
     private AutoCompleteTextView mEditRotas;
 
+    private List<NoMaritmo> nos;
+    private List<Aresta> mArestaList;
+    private List<Rotas> mRotas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,25 +54,94 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mEditRotas = findViewById(R.id.rotas);
+        mRotas = new ArrayList<>();
         mapFragment.getMapAsync(this);
 
-        final String[] rotas = new String[]{"Rota da banana","Rota da maçã"};
 
-        ArrayAdapter<String> adapterRotas = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, rotas);
+        ArrayAdapter<Rotas> adapterRotas = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, mRotas);
         mEditRotas.setAdapter(adapterRotas);
 
-        mEditRotas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        mEditRotas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MapsActivity.this, rotas[i], Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                nos = mRotas.get(i).getNosMaritmos();
+                mArestaList = mRotas.get(i).getArestas();
+                carregarGrafo();
             }
         });
     }
+
+    private void loadDefaultNos(){
+//        nos = new ArrayList<>();
+//        NoMaritmo noMaritmo = new NoMaritmo();
+//        noMaritmo.setId(1);
+//        noMaritmo.setPosicao(new LatLng(-20,-30));
+//        nos.add(noMaritmo);
+//        noMaritmo = new NoMaritmo();
+//        noMaritmo.setId(2);
+//        noMaritmo.setPosicao(new LatLng(-20,-20));
+//        nos.add(noMaritmo);
+//        noMaritmo = new NoMaritmo();
+//        noMaritmo.setId(3);
+//        noMaritmo.setPosicao(new LatLng(-20,-10));
+//        nos.add(noMaritmo);
+//        noMaritmo = new NoMaritmo();
+//        noMaritmo.setId(4);
+//        noMaritmo.setPosicao(new LatLng(-10,-10));
+//        nos.add(noMaritmo);
+//
+//        mArestaList = new ArrayList<>();
+//        Aresta aresta = new Aresta();
+//        aresta.setNoMaritmo1(nos.get(0));
+//        aresta.setNoMaritmo2(nos.get(1));
+//        aresta.setCorrente(3);
+//        aresta.setVento(3);
+//        aresta.setDistancia(50D);
+//        mArestaList.add(aresta);
+//
+//        aresta = new Aresta();
+//        aresta.setNoMaritmo1(nos.get(0));
+//        aresta.setNoMaritmo2(nos.get(3));
+//        aresta.setCorrente(9);
+//        aresta.setVento(1);
+//        aresta.setDistancia(900D);
+//        mArestaList.add(aresta);
+//
+//        aresta = new Aresta();
+//        aresta.setNoMaritmo1(nos.get(1));
+//        aresta.setNoMaritmo2(nos.get(2));
+//        aresta.setCorrente(5);
+//        aresta.setVento(2);
+//        aresta.setDistancia(30D);
+//        mArestaList.add(aresta);
+//
+//        aresta = new Aresta();
+//        aresta.setNoMaritmo1(nos.get(1));
+//        aresta.setNoMaritmo2(nos.get(3));
+//        aresta.setCorrente(15);
+//        aresta.setVento(3);
+//        aresta.setDistancia(500D);
+//        mArestaList.add(aresta);
+//
+//        aresta = new Aresta();
+//        aresta.setNoMaritmo1(nos.get(2));
+//        aresta.setNoMaritmo2(nos.get(3));
+//        aresta.setCorrente(1);
+//        aresta.setVento(3);
+//        aresta.setDistancia(600D);
+//        mArestaList.add(aresta);
+//
+//        Rotas rotas = new Rotas();
+//        rotas.setId(1);
+//        rotas.setDescricao("Rota teste");
+//        rotas.setArestas(mArestaList);
+//        rotas.setNosMaritmos(nos);
+//
+//
+//        mRotas.add(rotas);
+        mRotas.add(CarregadorDeRotas.Rota1());
+    }
+
 
     private String getDirectionsUrl(LatLng origin, LatLng dest) {
 
@@ -180,81 +252,83 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         map = googleMap;
         // Initializing
         markerPoints = new ArrayList<LatLng>();
-        LatLng santaCatarina = new LatLng(-27.8347002, 48.5302277);
+        LatLng santaCatarina = new LatLng(-27.8347002, -48.5302277);
 //        googleMap.addMarker(new MarkerOptions().position(sydney)
 //                .title("Marker in Sydney"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(santaCatarina));
 
-        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+        loadDefaultNos();
 
-            @Override
-            public void onMapClick(LatLng point) {
-                // TODO Auto-generated method stub
-//                List<LatLng> lstLatLngs = null;
-//                markerPoints = new ArrayList<>();
-//                markerPoints.add(point);
-//                googleMap.addMarker(new MarkerOptions().position(point));
-
-//                markerPoints = new ArrayList<>();
+//        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+//
+//            @Override
+//            public void onMapClick(LatLng point) {
+//                // TODO Auto-generated method stub
+////                List<LatLng> lstLatLngs = null;
+////                markerPoints = new ArrayList<>();
+////                markerPoints.add(point);
+////                googleMap.addMarker(new MarkerOptions().position(point));
+//
+////                markerPoints = new ArrayList<>();
+////                    markerPoints.add(point);
+//
+//                    /*if (markerPoints.size() > 1) {
+//                        markerPoints.clear();
+//                        map.clear();
+//                    }*/
+//
+//                    // Adding new item to the ArrayList
 //                    markerPoints.add(point);
-
-                    /*if (markerPoints.size() > 1) {
-                        markerPoints.clear();
-                        map.clear();
-                    }*/
-
-                    // Adding new item to the ArrayList
-                    markerPoints.add(point);
-
-                    // Creating MarkerOptions
-                    MarkerOptions options = new MarkerOptions();
-
-                    // Setting the position of the marker
-                    options.position(point);
-
-                    /**
-                     * For the start location, the color of marker is GREEN and
-                     * for the end location, the color of marker is RED.
-                     */
-                    if (markerPoints.size() == 1) {
-                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-                    } else if (markerPoints.size() == 2) {
-                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-                    }
-
-
-                    // Add new marker to the Google Map Android API V2
-                googleMap.addMarker(options);
-
-                    // Checks, whether start and end locations are captured
-                    if (markerPoints.size() >= 2) {
-                        LatLng origin = markerPoints.get(0);
-                        LatLng dest = markerPoints.get(1);
-
-                        // Getting URL to the Google Directions API
-                        /*String url = getDirectionsUrl(origin, dest);
-
-                        DownloadTask downloadTask = new DownloadTask();
-
-                        // Start downloading json data from Google Directions API
-                        downloadTask.execute(url);*/
-
-                        PolylineOptions polylineOptions = new PolylineOptions();
-                        polylineOptions.color(Color.RED);
-                        polylineOptions.width(2);
-                        /*polylineOptions.add(origin);
-                        polylineOptions.add(dest);*/
-                        for(int i = 0; i < markerPoints.size(); i++){
-                            for(int j = i; j < markerPoints.size(); j++){
-                                polylineOptions.add(markerPoints.get(i));
-                                polylineOptions.add(markerPoints.get(j));
-                            }
-                        }
-                        map.addPolyline(polylineOptions);
-                    }
-                }
-
-        });
+//
+//                    // Creating MarkerOptions
+//                    MarkerOptions options = new MarkerOptions();
+//
+//                    // Setting the position of the marker
+//                    options.position(point);
+//
+//                    /**
+//                     * For the start location, the color of marker is GREEN and
+//                     * for the end location, the color of marker is RED.
+//                     */
+//                    if (markerPoints.size() == 1) {
+//                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+//                    } else if (markerPoints.size() == 2) {
+//                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+//                    }
+//
+//
+//                    // Add new marker to the Google Map Android API V2
+//                googleMap.addMarker(options);
+//
+//                    // Checks, whether start and end locations are captured
+//                    if (markerPoints.size() >= 2) {
+//                        LatLng origin = markerPoints.get(0);
+//                        LatLng dest = markerPoints.get(1);
+//
+//                        // Getting URL to the Google Directions API
+//                        /*String url = getDirectionsUrl(origin, dest);
+//
+//                        DownloadTask downloadTask = new DownloadTask();
+//
+//                        // Start downloading json data from Google Directions API
+//                        downloadTask.execute(url);*/
+//
+//                        PolylineOptions polylineOptions = new PolylineOptions();
+//                        polylineOptions.color(Color.RED);
+//                        polylineOptions.width(2);
+//                        /*polylineOptions.add(origin);
+//                        polylineOptions.add(dest);*/
+//                        for(int i = 0; i < markerPoints.size(); i++){
+//                            for(int j = i; j < markerPoints.size(); j++){
+//                                polylineOptions.add(markerPoints.get(i));
+//                                polylineOptions.add(markerPoints.get(j));
+//                            }
+//                        }
+//                        map.addPolyline(polylineOptions);
+//                    }
+//                }
+//
+//        });
 
 
 //            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
@@ -309,6 +383,32 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //            });
 //        }
 
+    }
+
+    private void carregarGrafo() {
+        map.clear();
+        for (NoMaritmo no : nos) {
+            map.addMarker(new MarkerOptions().position(no.getPosicao()));
+
+        }
+        for (Aresta aresta : mArestaList) {
+            PolylineOptions polylineOptions = new PolylineOptions();
+            switch (aresta.getVento()) {
+                case 1:
+                    polylineOptions.color(Color.GREEN);
+                    break;
+                case 2:
+                    polylineOptions.color(Color.YELLOW);
+                    break;
+                case 3:
+                    polylineOptions.color(Color.RED);
+                    break;
+            }
+            polylineOptions.width(aresta.getCorrente());
+            polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
+            polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
+            map.addPolyline(polylineOptions);
+        }
     }
 
 
