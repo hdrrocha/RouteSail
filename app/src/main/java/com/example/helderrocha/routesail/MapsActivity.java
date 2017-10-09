@@ -147,6 +147,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //
 //        mRotas.add(rotas);
         mRotas.add(CarregadorDeRotas.Rota1());
+        mRotas.add(CarregadorDeRotas.Rota2());
+        mRotas.add(CarregadorDeRotas.Rota3());
     }
 
 

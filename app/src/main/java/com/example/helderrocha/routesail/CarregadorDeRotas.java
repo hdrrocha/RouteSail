@@ -46,7 +46,7 @@ public class CarregadorDeRotas {
         Aresta aresta = new Aresta();
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(3);
+        aresta.setCorrente(1);
         aresta.setVento(3);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
@@ -92,18 +92,96 @@ public class CarregadorDeRotas {
 
         return rotas;
     }
+
     public static Rotas Rota2(){
+        List<NoMaritmo> nos = new ArrayList<>();
+        List<Aresta> mArestaList = new ArrayList<>();
+
+        NoMaritmo noMaritmo = new NoMaritmo();
+        noMaritmo.setId(1);
+        noMaritmo.setmLocal("Saida Garopaba");
+        noMaritmo.setPosicao(new LatLng(-28.048067, -48.595084));
+        nos.add(noMaritmo);
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(2);
+        noMaritmo.setmLocal("Atlantico sul garopada caminho Florianópolis");
+        noMaritmo.setPosicao(new LatLng(-27.980174, -48.559378));
+        nos.add(noMaritmo);
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(3);
+        noMaritmo.setmLocal("Alantico sul, trajéto próximo a ponta das canas");
+        noMaritmo.setPosicao(new LatLng(-27.386842, -48.442649));
+        nos.add(noMaritmo);
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(4);
+        noMaritmo.setmLocal("Alantico sul, trajéto próximo a ponta das botas");
+        noMaritmo.setPosicao(new LatLng(-27.382650, -48.409433));
+        nos.add(noMaritmo);
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(5);
+        noMaritmo.setmLocal("Alantico sul, Ponta das Feiticeiras\n");
+        noMaritmo.setPosicao(new LatLng(-27.382650, -48.409433));
+        nos.add(noMaritmo);
+
+        Aresta aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(1);
+        aresta.setVento(3);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(3));
+        aresta.setCorrente(9);
+        aresta.setVento(1);
+        aresta.setDistancia(900D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(1));
+        aresta.setNoMaritmo2(nos.get(2));
+        aresta.setCorrente(5);
+        aresta.setVento(2);
+        aresta.setDistancia(30D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(1));
+        aresta.setNoMaritmo2(nos.get(3));
+        aresta.setCorrente(15);
+        aresta.setVento(3);
+        aresta.setDistancia(500D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(2));
+        aresta.setNoMaritmo2(nos.get(3));
+        aresta.setCorrente(1);
+        aresta.setVento(3);
+        aresta.setDistancia(600D);
+        mArestaList.add(aresta);
+
         Rotas rotas = new Rotas();
+        rotas.setId(1);
+        rotas.setDescricao("Garopaba/Florianópolis");
+        rotas.setArestas(mArestaList);
+        rotas.setNosMaritmos(nos);
+
         return rotas;
     }
+
     public static Rotas Rota3(){
         Rotas rotas = new Rotas();
         return rotas;
     }
+
     public static Rotas Rota4(){
         Rotas rotas = new Rotas();
         return rotas;
     }
+
     public static Rotas Rota5(){
         Rotas rotas = new Rotas();
         return rotas;
