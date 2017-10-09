@@ -19,19 +19,28 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
-        noMaritmo.setPosicao(new LatLng(-20,-30));
+        noMaritmo.setmLocal("Alantico sul, saida Canas Vieiras");
+        noMaritmo.setPosicao(new LatLng(-27.428102, -48.479555));
         nos.add(noMaritmo);
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(2);
-        noMaritmo.setPosicao(new LatLng(-20,-20));
+        noMaritmo.setmLocal("Ilha do Francês");
+        noMaritmo.setPosicao(new LatLng(-27.415741, -48.478054));
         nos.add(noMaritmo);
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(3);
-        noMaritmo.setPosicao(new LatLng(-20,-10));
+        noMaritmo.setmLocal("Alantico sul, trajéto próximo a ponta das canas");
+        noMaritmo.setPosicao(new LatLng(-27.386842, -48.442649));
         nos.add(noMaritmo);
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(4);
-        noMaritmo.setPosicao(new LatLng(-10,-10));
+        noMaritmo.setmLocal("Alantico sul, trajéto próximo a ponta das botas");
+        noMaritmo.setPosicao(new LatLng(-27.382650, -48.409433));
+        nos.add(noMaritmo);
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(5);
+        noMaritmo.setmLocal("Alantico sul, Ponta das Feiticeiras\n");
+        noMaritmo.setPosicao(new LatLng(-27.382650, -48.409433));
         nos.add(noMaritmo);
 
         Aresta aresta = new Aresta();
@@ -76,7 +85,7 @@ public class CarregadorDeRotas {
 
         Rotas rotas = new Rotas();
         rotas.setId(1);
-        rotas.setDescricao("Rota teste");
+        rotas.setDescricao("Canas Vieiras/Ponta das Fenticeiras");
         rotas.setArestas(mArestaList);
         rotas.setNosMaritmos(nos);
 

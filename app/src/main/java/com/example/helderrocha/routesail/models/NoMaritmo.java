@@ -11,6 +11,7 @@ import java.util.List;
 public class NoMaritmo {
     private Integer mId;
     private LatLng mPosicao;
+    private String mLocal;
 
     public Integer getId() {
         return mId;
@@ -26,5 +27,13 @@ public class NoMaritmo {
 
     public void setPosicao(LatLng mPosicao) {
         this.mPosicao = mPosicao;
+    }
+
+    public String getmLocal() {
+        return mLocal;
+    }
+
+    public void setmLocal(String mLocal) {
+        this.mLocal = mLocal;
     }
 }
