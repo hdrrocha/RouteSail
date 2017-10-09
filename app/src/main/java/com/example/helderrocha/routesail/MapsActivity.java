@@ -69,6 +69,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 carregarGrafo();
             }
         });
+
+        mEditRotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View arg0) {
+                mEditRotas.showDropDown();
+            }
+        });
     }
 
     private void loadDefaultNos(){
@@ -252,137 +259,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         map = googleMap;
         // Initializing
         markerPoints = new ArrayList<LatLng>();
-        LatLng santaCatarina = new LatLng(-27.8347002, -48.5302277);
-//        googleMap.addMarker(new MarkerOptions().position(sydney)
-//                .title("Marker in Sydney"));
+        LatLng santaCatarina = new LatLng(-27.588462, -48.336853);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(santaCatarina));
-
+        googleMap.animateCamera( CameraUpdateFactory.zoomTo( 8.0f ) );
         loadDefaultNos();
-
-//        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-//
-//            @Override
-//            public void onMapClick(LatLng point) {
-//                // TODO Auto-generated method stub
-////                List<LatLng> lstLatLngs = null;
-////                markerPoints = new ArrayList<>();
-////                markerPoints.add(point);
-////                googleMap.addMarker(new MarkerOptions().position(point));
-//
-////                markerPoints = new ArrayList<>();
-////                    markerPoints.add(point);
-//
-//                    /*if (markerPoints.size() > 1) {
-//                        markerPoints.clear();
-//                        map.clear();
-//                    }*/
-//
-//                    // Adding new item to the ArrayList
-//                    markerPoints.add(point);
-//
-//                    // Creating MarkerOptions
-//                    MarkerOptions options = new MarkerOptions();
-//
-//                    // Setting the position of the marker
-//                    options.position(point);
-//
-//                    /**
-//                     * For the start location, the color of marker is GREEN and
-//                     * for the end location, the color of marker is RED.
-//                     */
-//                    if (markerPoints.size() == 1) {
-//                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-//                    } else if (markerPoints.size() == 2) {
-//                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-//                    }
-//
-//
-//                    // Add new marker to the Google Map Android API V2
-//                googleMap.addMarker(options);
-//
-//                    // Checks, whether start and end locations are captured
-//                    if (markerPoints.size() >= 2) {
-//                        LatLng origin = markerPoints.get(0);
-//                        LatLng dest = markerPoints.get(1);
-//
-//                        // Getting URL to the Google Directions API
-//                        /*String url = getDirectionsUrl(origin, dest);
-//
-//                        DownloadTask downloadTask = new DownloadTask();
-//
-//                        // Start downloading json data from Google Directions API
-//                        downloadTask.execute(url);*/
-//
-//                        PolylineOptions polylineOptions = new PolylineOptions();
-//                        polylineOptions.color(Color.RED);
-//                        polylineOptions.width(2);
-//                        /*polylineOptions.add(origin);
-//                        polylineOptions.add(dest);*/
-//                        for(int i = 0; i < markerPoints.size(); i++){
-//                            for(int j = i; j < markerPoints.size(); j++){
-//                                polylineOptions.add(markerPoints.get(i));
-//                                polylineOptions.add(markerPoints.get(j));
-//                            }
-//                        }
-//                        map.addPolyline(polylineOptions);
-//                    }
-//                }
-//
-//        });
-
-
-//            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-//
-//                @Override
-//                public void onMapClick(LatLng point) {
-//                    markerPoints = new ArrayList<>();
-//                    markerPoints.add(point);
-//
-//                    if (markerPoints.size() > 1) {
-//                        markerPoints.clear();
-//                        map.clear();
-//                    }
-//
-//                    // Adding new item to the ArrayList
-//                    markerPoints.add(point);
-//
-//                    // Creating MarkerOptions
-//                    MarkerOptions options = new MarkerOptions();
-//
-//                    // Setting the position of the marker
-//                    options.position(point);
-//
-//                    /**
-//                     * For the start location, the color of marker is GREEN and
-//                     * for the end location, the color of marker is RED.
-//                     */
-//                    if (markerPoints.size() == 1) {
-//                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-//                    } else if (markerPoints.size() == 2) {
-//                        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-//                    }
-//
-//
-//                    // Add new marker to the Google Map Android API V2
-//                    map.addMarker(options);
-//
-//                    // Checks, whether start and end locations are captured
-//                    if (markerPoints.size() >= 2) {
-//                        LatLng origin = markerPoints.get(0);
-//                        LatLng dest = markerPoints.get(1);
-//
-//                        // Getting URL to the Google Directions API
-//                        String url = getDirectionsUrl(origin, dest);
-//
-//                        DownloadTask downloadTask = new DownloadTask();
-//
-//                        // Start downloading json data from Google Directions API
-//                        downloadTask.execute(url);
-//                    }
-//                }
-//            });
-//        }
-
     }
 
     private void carregarGrafo() {
