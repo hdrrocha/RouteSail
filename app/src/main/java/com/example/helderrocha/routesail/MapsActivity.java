@@ -7,11 +7,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.helderrocha.routesail.models.Aresta;
@@ -66,6 +69,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 nos = mRotas.get(i).getNosMaritmos();
                 mArestaList = mRotas.get(i).getArestas();
+
+                InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                in.hideSoftInputFromWindow(mEditRotas.getApplicationWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+
+
                 carregarGrafo();
             }
         });
@@ -76,6 +84,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 mEditRotas.showDropDown();
             }
         });
+
+
+
+
     }
 
     private void loadDefaultNos(){
