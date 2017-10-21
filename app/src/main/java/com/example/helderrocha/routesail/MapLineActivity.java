@@ -45,8 +45,15 @@ public class MapLineActivity extends AppCompatActivity implements OnMapReadyCall
         // when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+
         mapFragment.getMapAsync(this);
 
+        Bundle extras = getIntent().getExtras();
+        String value;
+        if (extras != null) {
+            value = extras.getString("velocidade");
+            Log.w("PAULINHO", value);
+        }
 
     }
 
@@ -73,4 +80,25 @@ public class MapLineActivity extends AppCompatActivity implements OnMapReadyCall
             }
         });
     }
+
+    public boolean validaNo(boolean correnteFavor,  boolean vento) {
+
+        if(vento && correnteFavor){
+            //vento contra e corrente a favor
+            return true;
+        } else if(vento){
+            //sem corrente mas vento contra
+            return true;
+        }else if(correnteFavor){
+            //sem vento mas corrente a favor
+        }else{
+            //distancia
+        }
+        return false;
+    }
+
+    public Double calculaVelocidadeAlternada(Double velocidadeCorrente,  Double velocidadeBarco) {
+        return velocidadeCorrente + velocidadeBarco;
+    }
+
 }
