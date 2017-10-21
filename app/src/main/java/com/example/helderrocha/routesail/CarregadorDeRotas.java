@@ -22,11 +22,13 @@ public class CarregadorDeRotas {
         noMaritmo.setmLocal("Alantico sul, saida Canas Vieiras");
         noMaritmo.setPosicao(new LatLng(-27.428102, -48.479555));
         nos.add(noMaritmo);
+
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(2);
         noMaritmo.setmLocal("Ilha do Francês");
         noMaritmo.setPosicao(new LatLng(-27.415741, -48.478054));
         nos.add(noMaritmo);
+
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(3);
         noMaritmo.setmLocal("Alantico sul, trajéto próximo a ponta das canas");
@@ -39,7 +41,7 @@ public class CarregadorDeRotas {
         nos.add(noMaritmo);
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(5);
-        noMaritmo.setmLocal("Alantico sul, Ponta das Feiticeiras\n");
+        noMaritmo.setmLocal("Alantico sul, Ponta das Feiticeiras");
         noMaritmo.setPosicao(new LatLng(-27.382650, -48.409433));
         nos.add(noMaritmo);
 
@@ -258,40 +260,43 @@ public class CarregadorDeRotas {
         noMaritmo.setPosicao(new LatLng(-27.151093, -48.544663));
         nos.add(noMaritmo);
 
-
-
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(2);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.147885, -48.549470));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(3);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.141317, -48.553246));
         nos.add(noMaritmo);
 
-
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(4);
         noMaritmo.setmLocal("Contorno  por fora a Ilha de porto Belo  Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.133526, -48.547410));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(5);
         noMaritmo.setmLocal("Saída  Ilha de porto Belo   Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.133067, -48.539513));
         nos.add(noMaritmo);
 
-
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(6);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.131730, -48.534750));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(7);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.131730, -48.534750));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(8);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.128942, -48.527969));
@@ -299,38 +304,44 @@ public class CarregadorDeRotas {
 
 //Camiho 2
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(9);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.146663, -48.541702));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(10);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.143188, -48.542260));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(11);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.141889, -48.538698));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(12);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.138643, -48.537625));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(13);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.134137, -48.535179));
         nos.add(noMaritmo);
 
 //        Caminho 3
-
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(14);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.145899, -48.539170));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(15);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.143913, -48.538054));
@@ -342,6 +353,7 @@ public class CarregadorDeRotas {
         nos.add(noMaritmo);
 
 //        (Ligar com camino 1)
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(17);
         noMaritmo.setmLocal("Praia do Caixa D'Açp Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.127185, -48.526639));
@@ -507,77 +519,92 @@ public class CarregadorDeRotas {
         noMaritmo.setPosicao(new LatLng(-27.783704, -48.523154));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(2);
         noMaritmo.setmLocal("Enseada do Pântano do Sul");
         noMaritmo.setPosicao(new LatLng(-27.785678, -48.521952));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(3);
         noMaritmo.setmLocal("Enseada do Pântano do Sul");
         noMaritmo.setPosicao(new LatLng(-27.787367, -48.522145));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(4);
         noMaritmo.setmLocal("Enseada do Pântano do Sul");
         noMaritmo.setPosicao(new LatLng(-27.790765, -48.523755));
         nos.add(noMaritmo);
 
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(5);
         noMaritmo.setmLocal("Enseada do Pântano do Sul");
         noMaritmo.setPosicao(new LatLng(-27.793935, -48.524677));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(6);
         noMaritmo.setmLocal("Enseada do Pântano do Sul");
         noMaritmo.setPosicao(new LatLng(-27.798453, -48.524033));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(6);
         noMaritmo.setmLocal("Enseada do Pântano do Sul");
         noMaritmo.setPosicao(new LatLng(-27.808551, -48.521974));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(8);
         noMaritmo.setmLocal("Ponto norte anterios a ilha do  meio irmão Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.817205, -48.519742));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(9);
         noMaritmo.setmLocal("Ilha da irmã pequena, lateral ilha do meio irmão Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.823885, -48.532273));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(10);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.832842, -48.535535));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(11);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.841267, -48.545469));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(12);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.850324, -48.569701));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(13);
         noMaritmo.setmLocal("Passagem esqurda direão ao meio  ilha do meio irmao e irmã de fora Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.827038, -48.514492));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(14);
         noMaritmo.setmLocal("Meio  ilha do meio irmao e irmã de fora  Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.836868, -48.512947));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(14);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.842484, -48.515307));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(16);
         noMaritmo.setmLocal("Saida da Ilha do meio imrão Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.851107, -48.523365));
@@ -588,21 +615,25 @@ public class CarregadorDeRotas {
         noMaritmo.setPosicao(new LatLng(-27.829401, -48.498259));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(18);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.837788, -48.493624));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(19);
         noMaritmo.setmLocal("Passagem pela Ilha da Imã de fora Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.841052, -48.495684));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(20);
         noMaritmo.setmLocal("Saida da ILha de Irmã de fora Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.848148, -48.503152));
         nos.add(noMaritmo);
 
+        noMaritmo = new NoMaritmo();
         noMaritmo.setId(21);
         noMaritmo.setmLocal("Chegada a praia da Ponta do papagaio Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.849110, -48.576910));
@@ -629,8 +660,727 @@ public class CarregadorDeRotas {
     }
 
     public static Rotas Rota5() {
+        List<NoMaritmo> nos = new ArrayList<>();
+        List<Aresta> mArestaList = new ArrayList<>();
+
+        NoMaritmo noMaritmo = new NoMaritmo();
+        noMaritmo.setId(1);
+        noMaritmo.setmLocal("Saida de jurere internacional :  Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.435350, -48.502432));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(2);
+        noMaritmo.setmLocal("Proximidades da ilha do frances: Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.417524, -48.487296));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(3);
+        noMaritmo.setmLocal("Proximidades da ilha do frances lado de fora:Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.411733, -48.477598));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(4);
+        noMaritmo.setmLocal("Saida das Proximidades da ilha do frances lado de fora:Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.413943, -48.471847));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(5);
+        noMaritmo.setmLocal("Saida das Proximidades Canas vieiras: Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.414247, -48.463264));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(6);
+        noMaritmo.setmLocal("Proximidades da ilha do frances lado de dentro ");
+        noMaritmo.setPosicao(new LatLng(-27.424205, -48.475564));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(7);
+        noMaritmo.setmLocal("Saida das Proximidades da ilha do frances lado de dentro:Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.421234, -48.467582));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Proximidades Canas vieiras: Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.417868, -48.456682));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Proximidades Ponta das canas:  Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.409462, -48.443818));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(9);
+        noMaritmo.setmLocal("Chegada a Ponta das canas");
+        noMaritmo.setPosicao(new LatLng(-27.401538, -48.431458));
+        nos.add(noMaritmo);
+
+        Aresta aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(1);
+        aresta.setVento(3);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
         Rotas rotas = new Rotas();
+        rotas.setId(5);
+        rotas.setDescricao("Saida de jurere internacional /Chegada a Ponta das canas");
+        rotas.setArestas(mArestaList);
+        rotas.setNosMaritmos(nos);
+
         return rotas;
     }
 
+    public static Rotas Rota6() {
+        List<NoMaritmo> nos = new ArrayList<>();
+        List<Aresta> mArestaList = new ArrayList<>();
+
+        NoMaritmo noMaritmo = new NoMaritmo();
+        noMaritmo.setId(1);
+        noMaritmo.setmLocal("Saida Garopaba: Santa Catarina");
+        noMaritmo.setPosicao(new LatLng(-28.029592, -48.599380));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(2);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.998979, -48.595260));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(3);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.967751, -48.599380));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(4);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.940761, -48.586333));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(5);
+        noMaritmo.setmLocal("Proximidades a guarda do Embau Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.919224, -48.567451));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(6);
+        noMaritmo.setmLocal("Proximidades a guarda do Embau  passagem ao meio entre a ilha de Garopaba Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.910123, -48.550628));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(7);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.876138, -48.492263));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.818461, -48.440078));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.003235, -48.571641));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(9);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.968977, -48.552243));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(10);
+        noMaritmo.setmLocal("Lado direito ilha da Garopaba  Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.949265, -48.529820 ));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(11);
+        noMaritmo.setmLocal("Passada  direito ilha da Garopaba  Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.940280, -48.522696));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(12);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.923484, -48.519306));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(13);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.875468, -48.52243));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(14);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.848758, -48.484330));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(15);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.822952, -48.466820));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(16);
+        noMaritmo.setmLocal("Chegada Ilha de Santa Catarina");
+        noMaritmo.setPosicao(new LatLng(-27.764967, -48.484087));
+        nos.add(noMaritmo);
+
+
+        Aresta aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(1);
+        aresta.setVento(3);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        Rotas rotas = new Rotas();
+        rotas.setId(6);
+        rotas.setDescricao("Saida Garopaba /Chegada Ilha de Santa Catarina");
+        rotas.setArestas(mArestaList);
+        rotas.setNosMaritmos(nos);
+
+        return rotas;
+    }
+
+    public static Rotas Rota7() {
+        List<NoMaritmo> nos = new ArrayList<>();
+        List<Aresta> mArestaList = new ArrayList<>();
+
+        NoMaritmo noMaritmo = new NoMaritmo();
+        noMaritmo.setId(1);
+        noMaritmo.setmLocal("Saida Joaquina Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.630815, -48.449901));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(2);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.638876, -48.450416));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(3);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.646783, -48.456081));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(4);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.653778, -48.460887));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(5);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.663509, -48.454536));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(6);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.676127, -48.449901));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(7);
+        noMaritmo.setmLocal("Proximo ao Campeche direta Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.656185, -48.463518));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.662571, -48.466779));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.670933, -48.471586));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(9);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.683702, -48.472444));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(10);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.692367, -48.472101));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(11);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.697839, -48.473131));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(12);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.701030, -48.472273));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(13);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.705894, -48.471071));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(14);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.706654, -48.468668));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(15);
+        noMaritmo.setmLocal("Proximo ao Campeche direta esquerda Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.689517, -48.453540));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(16);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.694533, -48.457231));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(17);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.698940, -48.459548));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(18);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.702208, -48.462295));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(19);
+        noMaritmo.setmLocal("Chegada ao sul da Ilha do Campeche Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.704412, -48.465728));
+        nos.add(noMaritmo);
+
+
+        Aresta aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(1);
+        aresta.setVento(3);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        Rotas rotas = new Rotas();
+        rotas.setId(6);
+        rotas.setDescricao("Saida Joaquina Oceano Atlântico Su /Chegada ao sul da Ilha do Campeche Oceano Atlântico Sul");
+        rotas.setArestas(mArestaList);
+        rotas.setNosMaritmos(nos);
+
+        return rotas;
+    }
+
+    public static Rotas Rota9() {
+        List<NoMaritmo> nos = new ArrayList<>();
+        List<Aresta> mArestaList = new ArrayList<>();
+
+        NoMaritmo noMaritmo = new NoMaritmo();
+        noMaritmo.setId(1);
+        noMaritmo.setmLocal("Saida laguna Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.488745, -48.761960));
+        nos.add(noMaritmo);
+
+//        Lado 1
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(2);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.475880, -48.749189));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(3);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.458677, -48.747129));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(4);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.434225, -48.728246));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(5);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.416109, -48.717603));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(6);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.392856, -48.709707));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(7);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.377150, -48.681898));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.341198, -48.674345));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.320044, -48.680524));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(9);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.283770, -48.671941));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(10);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.262151, -48.655805));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(11);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.248542, -48.660698));
+        nos.add(noMaritmo);
+
+//        Lado 2
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(12);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.487934, -48.744492));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(13);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.484948, -48.748677));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(14);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.476988, -48.747347));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(15);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.471141, -48.745631));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(16);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.466161, -48.726254));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(17);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.460565, -48.710842));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(18);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.454226, -48.695049));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(19);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.443963, -48.684406));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(20);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.412865, -48.686466));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(21);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.261966, -48.626817));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(22);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.252516, -48.626388));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(23);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.245257, -48.648618));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(24);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.244501, -48.655828));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(25);
+        noMaritmo.setmLocal("Chegada Imbituba:Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-28.244156, -48.660440));
+        nos.add(noMaritmo);
+;
+
+
+        Aresta aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(1);
+        aresta.setVento(3);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        Rotas rotas = new Rotas();
+        rotas.setId(6);
+        rotas.setDescricao("Saida laguna /Chegada Imbituba");
+        rotas.setArestas(mArestaList);
+        rotas.setNosMaritmos(nos);
+
+        return rotas;
+    }
+
+    public static Rotas Rota10() {
+        List<NoMaritmo> nos = new ArrayList<>();
+        List<Aresta> mArestaList = new ArrayList<>();
+
+        NoMaritmo noMaritmo = new NoMaritmo();
+        noMaritmo.setId(1);
+        noMaritmo.setmLocal("Saida Porto BeloOceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.147987, -48.559763));
+        nos.add(noMaritmo);
+
+//      Caminho 1
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(2);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.129655, -48.565942));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(3);
+        noMaritmo.setmLocal("Proximidades de itapema Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.105132, -48.592979));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(4);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.081292, -48.577186));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(5);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.081750, -48.575727));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(6);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.024344, -48.567466));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(7);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.014786, -48.566865));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Proximidades a taquara Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.005457, -48.565921));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(8);
+        noMaritmo.setmLocal("Taquara Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.006222, -48.577251));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(9);
+        noMaritmo.setmLocal("Taquara Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-26.998421, -48.579225));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(10);
+        noMaritmo.setmLocal("Saida de Taquara Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-26.993144, -48.578967));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(11);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-26.989664, -48.585791));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(12);
+        noMaritmo.setmLocal("Praia de Laramjeiras Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-26.990162, -48.593086));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(13);
+        noMaritmo.setmLocal("Proximidades de Molhe da Barra Sul Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-26.994559, -48.603171));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(14);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.000869, -48.614759));
+        nos.add(noMaritmo);
+
+//        Caminho 2
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(15);
+        noMaritmo.setmLocal("Direção a ilha de porto Bello Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.146354, -48.543669));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(16);
+        noMaritmo.setmLocal("Ilha de Porto Belo Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.140320, -48.538562));
+        nos.add(noMaritmo);
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(17);
+        noMaritmo.setmLocal("Saida da Ilha de Porto Belo Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.134783, -48.535988));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(18);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.129092, -48.540708));
+        nos.add(noMaritmo);
+
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(19);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.120689, -48.565814));
+        nos.add(noMaritmo);
+
+//        Liga com caminho 3
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(20);
+        noMaritmo.setmLocal("Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-27.106097, -48.539678));
+        nos.add(noMaritmo);
+
+
+        noMaritmo = new NoMaritmo();
+        noMaritmo.setId(21);
+        noMaritmo.setmLocal("Praia central de Balneario Camburiú Oceano Atlântico Sul");
+        noMaritmo.setPosicao(new LatLng(-26.995219, -48.622677));
+        nos.add(noMaritmo);
+
+
+        Aresta aresta = new Aresta();
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(1);
+        aresta.setVento(3);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        Rotas rotas = new Rotas();
+        rotas.setId(6);
+        rotas.setDescricao("Saida laguna /Chegada Imbituba");
+        rotas.setArestas(mArestaList);
+        rotas.setNosMaritmos(nos);
+
+        return rotas;
+    }
 }
