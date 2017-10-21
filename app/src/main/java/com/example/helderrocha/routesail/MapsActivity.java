@@ -2,9 +2,12 @@ package com.example.helderrocha.routesail;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -16,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.helderrocha.routesail.models.Aresta;
 import com.example.helderrocha.routesail.models.NoMaritmo;
@@ -25,6 +29,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -50,6 +55,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private List<NoMaritmo> nos;
     private List<Aresta> mArestaList;
     private List<Rotas> mRotas;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +65,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mEditRotas = findViewById(R.id.rotas);
         mRotas = new ArrayList<>();
         mapFragment.getMapAsync(this);
-
 
         ArrayAdapter<Rotas> adapterRotas = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, mRotas);
         mEditRotas.setAdapter(adapterRotas);
@@ -164,6 +169,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mRotas.add(CarregadorDeRotas.Rota4());
         mRotas.add(CarregadorDeRotas.Rota5());
         mRotas.add(CarregadorDeRotas.Rota6());
+        mRotas.add(CarregadorDeRotas.Rota7());
+        mRotas.add(CarregadorDeRotas.Rota9());
+        mRotas.add(CarregadorDeRotas.Rota10());
 
 
     }
