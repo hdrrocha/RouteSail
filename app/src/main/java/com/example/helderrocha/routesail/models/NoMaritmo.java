@@ -12,6 +12,7 @@ public class NoMaritmo {
     private Integer mId;
     private LatLng mPosicao;
     private String mLocal;
+    private int mIcon;
 
     public Integer getId() {
         return mId;
@@ -36,4 +37,13 @@ public class NoMaritmo {
     public void setmLocal(String mLocal) {
         this.mLocal = mLocal;
     }
+
+    public int getmIcon() {
+        return mIcon;
+    }
+
+    public void setmIcon(int mIcon) {
+        this.mIcon = mIcon;
+    }
+
 }

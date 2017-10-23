@@ -20,6 +20,7 @@ public class CarregadorDeRotas {
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
         noMaritmo.setmLocal("Alantico sul, saida Canas Vieiras");
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setPosicao(new LatLng(-27.428102, -48.479555));
         nos.add(noMaritmo);
 
@@ -41,6 +42,7 @@ public class CarregadorDeRotas {
         nos.add(noMaritmo);
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(5);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Alantico sul, Ponta das Feiticeiras");
         noMaritmo.setPosicao(new LatLng(-27.382650, -48.409433));
         nos.add(noMaritmo);
@@ -101,6 +103,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida de jurere internacional");
         noMaritmo.setPosicao(new LatLng(-27.435350, -48.502432));
         nos.add(noMaritmo);
@@ -156,6 +159,7 @@ public class CarregadorDeRotas {
 
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(10);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada a Ponta das canas: ");
         noMaritmo.setPosicao(new LatLng(-27.401538, -48.431458));
         nos.add(noMaritmo);
@@ -256,6 +260,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Pier de Porto Belo Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.151093, -48.544663));
         nos.add(noMaritmo);
@@ -355,6 +360,8 @@ public class CarregadorDeRotas {
 //        (Ligar com camino 1)
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(17);
+
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Praia do Caixa D'Açp Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.127185, -48.526639));
         nos.add(noMaritmo);
@@ -515,6 +522,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida da praia dos açores Enseada do Pântano do Suls");
         noMaritmo.setPosicao(new LatLng(-27.783704, -48.523154));
         nos.add(noMaritmo);
@@ -635,6 +643,7 @@ public class CarregadorDeRotas {
 
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(21);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada a praia da Ponta do papagaio Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.849110, -48.576910));
         nos.add(noMaritmo);
@@ -665,6 +674,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida de jurere internacional :  Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.435350, -48.502432));
         nos.add(noMaritmo);
@@ -722,6 +732,7 @@ public class CarregadorDeRotas {
 
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(9);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada a Ponta das canas");
         noMaritmo.setPosicao(new LatLng(-27.401538, -48.431458));
         nos.add(noMaritmo);
@@ -749,6 +760,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida Garopaba: Santa Catarina");
         noMaritmo.setPosicao(new LatLng(-28.029592, -48.599380));
         nos.add(noMaritmo);
@@ -858,6 +870,7 @@ public class CarregadorDeRotas {
 
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(16);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada Ilha de Santa Catarina");
         noMaritmo.setPosicao(new LatLng(-27.764967, -48.484087));
         nos.add(noMaritmo);
@@ -886,6 +899,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida Joaquina Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.630815, -48.449901));
         nos.add(noMaritmo);
@@ -1006,6 +1020,7 @@ public class CarregadorDeRotas {
 
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(19);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada ao sul da Ilha do Campeche Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.704412, -48.465728));
         nos.add(noMaritmo);
@@ -1034,6 +1049,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida laguna Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.488745, -48.761960));
         nos.add(noMaritmo);
@@ -1197,6 +1213,7 @@ public class CarregadorDeRotas {
 
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(25);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada Imbituba:Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.244156, -48.660440));
         nos.add(noMaritmo);
@@ -1226,6 +1243,7 @@ public class CarregadorDeRotas {
 
         NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
+        noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida Porto Belo Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.147987, -48.559763));
         nos.add(noMaritmo);
@@ -1362,6 +1380,7 @@ public class CarregadorDeRotas {
 
         noMaritmo = new NoMaritmo();
         noMaritmo.setId(21);
+        noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Praia central de Balneario Camburiú Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-26.995219, -48.622677));
         nos.add(noMaritmo);

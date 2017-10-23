@@ -28,6 +28,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -295,7 +296,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void carregarGrafo() {
         map.clear();
         for (NoMaritmo no : nos) {
-            map.addMarker(new MarkerOptions().position(no.getPosicao()));
+            // create marker
+            MarkerOptions marker = new MarkerOptions().position(no.getPosicao()).title("Hello Maps");
+//            Changing marker icon
+            if(no.getmIcon()!= 0){
+                marker.icon(BitmapDescriptorFactory.fromResource(no.getmIcon()));
+            }else {
+                marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.no));
+            }
+
+
+
+
+
+            map.addMarker(marker);
 
         }
         for (Aresta aresta : mArestaList) {
