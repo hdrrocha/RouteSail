@@ -49,18 +49,18 @@ public class CarregadorDeRotas {
 
         Aresta aresta = new Aresta();
         aresta.setNoMaritmo1(nos.get(0));
-        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setNoMaritmo2(nos.get(2));
         aresta.setCorrente(1);
-        aresta.setVento(3);
-        aresta.setDistancia(50D);
+        aresta.setVento(1);
+        aresta.setDistancia(80D);
         mArestaList.add(aresta);
 
         aresta = new Aresta();
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(9);
-        aresta.setVento(1);
-        aresta.setDistancia(900D);
+        aresta.setCorrente(0);
+        aresta.setVento(0);
+        aresta.setDistancia(90D);
         mArestaList.add(aresta);
 
         aresta = new Aresta();
@@ -76,7 +76,7 @@ public class CarregadorDeRotas {
         aresta.setNoMaritmo2(nos.get(3));
         aresta.setCorrente(15);
         aresta.setVento(3);
-        aresta.setDistancia(500D);
+        aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
         aresta = new Aresta();

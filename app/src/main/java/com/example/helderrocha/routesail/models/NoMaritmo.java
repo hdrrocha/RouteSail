@@ -14,6 +14,8 @@ public class NoMaritmo {
     private String mLocal;
     private int mIcon;
 
+    private List<Aresta> mAresta;
+
     public Integer getId() {
         return mId;
     }
@@ -46,4 +48,11 @@ public class NoMaritmo {
         this.mIcon = mIcon;
     }
 
+    public List<Aresta> getmAresta() {
+        return mAresta;
+    }
+
+    public void setmAresta(List<Aresta> mAresta) {
+        this.mAresta = mAresta;
+    }
 }

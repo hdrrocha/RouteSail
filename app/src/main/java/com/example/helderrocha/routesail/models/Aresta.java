@@ -5,18 +5,18 @@ package com.example.helderrocha.routesail.models;
  */
 
 public class Aresta {
-    private Integer mId;
+    private int mId;
     private NoMaritmo mNoMaritmo1;
     private NoMaritmo mNoMaritmo2;
     private Double mDistancia;
     private Integer mVento;
     private Integer mCorrente;
 
-    public Integer getId() {
+    public int getId() {
         return mId;
     }
 
-    public void setId(Integer mId) {
+    public void setId(int mId) {
         this.mId = mId;
     }
 
