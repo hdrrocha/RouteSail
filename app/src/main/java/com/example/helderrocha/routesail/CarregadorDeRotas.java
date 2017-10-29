@@ -952,24 +952,124 @@ public class CarregadorDeRotas {
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(8);
+        noMaritmo.setId(9);
         noMaritmo.setmLocal("Proximidades Ponta das canas:  Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.409462, -48.443818));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(9);
+        noMaritmo.setId(10);
         noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada a Ponta das canas");
         noMaritmo.setPosicao(new LatLng(-27.401538, -48.431458));
         nos.add(noMaritmo);
 
 
+        Aresta aresta = new Aresta();
+        aresta.setId(1);
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
 
+
+        aresta = new Aresta();
+        aresta.setId(2);
+        aresta.setNoMaritmo1(nos.get(1));
+        aresta.setNoMaritmo2(nos.get(2));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(3);
+        aresta.setNoMaritmo1(nos.get(2));
+        aresta.setNoMaritmo2(nos.get(3));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(4);
+        aresta.setNoMaritmo1(nos.get(3));
+        aresta.setNoMaritmo2(nos.get(4));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(5);
+        aresta.setNoMaritmo1(nos.get(4));
+        aresta.setNoMaritmo2(nos.get(7));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(6);
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(5));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(7);
+        aresta.setNoMaritmo1(nos.get(5));
+        aresta.setNoMaritmo2(nos.get(6));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(8);
+        aresta.setNoMaritmo1(nos.get(6));
+        aresta.setNoMaritmo2(nos.get(7));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(9);
+        aresta.setNoMaritmo1(nos.get(7));
+        aresta.setNoMaritmo2(nos.get(8));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(10);
+        aresta.setNoMaritmo1(nos.get(8));
+        aresta.setNoMaritmo2(nos.get(9));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+//        Saida de jurere internacional /Chegada a Ponta das canas
 
         Rotas rotas = new Rotas();
         rotas.setId(5);
-        rotas.setDescricao("Saida de jurere internacional /Chegada a Ponta das canas");
+        rotas.setDescricao("CERTA 5");
         rotas.setArestas(mArestaList);
         rotas.setNosMaritmos(nos);
 
@@ -1295,11 +1395,12 @@ public class CarregadorDeRotas {
         return rotas;
     }
 
+
     public static Rotas Rota7() {
         List<NoMaritmo> nos = new ArrayList<>();
         List<Aresta> mArestaList = new ArrayList<>();
 
-            NoMaritmo noMaritmo = new NoMaritmo();
+        NoMaritmo noMaritmo = new NoMaritmo();
         noMaritmo.setId(1);
         noMaritmo.setmIcon(R.drawable.partida);
         noMaritmo.setmLocal("Saida Joaquina Oceano Atlântico Sul");
@@ -1352,68 +1453,68 @@ public class CarregadorDeRotas {
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(8);
+        noMaritmo.setId(9);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.670933, -48.471586));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(9);
+        noMaritmo.setId(10);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.683702, -48.472444));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(10);
+        noMaritmo.setId(11);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.692367, -48.472101));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(11);
+        noMaritmo.setId(12);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.697839, -48.473131));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(12);
+        noMaritmo.setId(13);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.701030, -48.472273));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(13);
+        noMaritmo.setId(14);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.705894, -48.471071));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(14);
+        noMaritmo.setId(15);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.706654, -48.468668));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(15);
+        noMaritmo.setId(16);
         noMaritmo.setmLocal("Proximo ao Campeche direta esquerda Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.689517, -48.453540));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(16);
+        noMaritmo.setId(17);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.694533, -48.457231));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(17);
+        noMaritmo.setId(18);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.698940, -48.459548));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(18);
+        noMaritmo.setId(19);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.702208, -48.462295));
         nos.add(noMaritmo);
@@ -1421,7 +1522,7 @@ public class CarregadorDeRotas {
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(19);
+        noMaritmo.setId(20);
         noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada ao sul da Ilha do Campeche Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.704412, -48.465728));
@@ -1429,16 +1530,15 @@ public class CarregadorDeRotas {
 
 
 
-
+//        Saida Joaquina Oceano Atlântico Su /Chegada ao sul da Ilha do Campeche Oceano Atlântico Sul
         Rotas rotas = new Rotas();
         rotas.setId(7);
-        rotas.setDescricao("Saida Joaquina Oceano Atlântico Su /Chegada ao sul da Ilha do Campeche Oceano Atlântico Sul");
+        rotas.setDescricao("CERTA 6");
         rotas.setArestas(mArestaList);
         rotas.setNosMaritmos(nos);
 
         return rotas;
     }
-
     public static Rotas Rota9() {
         List<NoMaritmo> nos = new ArrayList<>();
         List<Aresta> mArestaList = new ArrayList<>();
@@ -1497,69 +1597,69 @@ public class CarregadorDeRotas {
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(8);
+        noMaritmo.setId(9);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.320044, -48.680524));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(9);
+        noMaritmo.setId(10);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.283770, -48.671941));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(10);
+        noMaritmo.setId(11);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.262151, -48.655805));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(11);
+        noMaritmo.setId(12);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.248542, -48.660698));
         nos.add(noMaritmo);
 
 //        Lado 2
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(12);
+        noMaritmo.setId(13);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.487934, -48.744492));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(13);
+        noMaritmo.setId(14);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.484948, -48.748677));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(14);
+        noMaritmo.setId(15);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.476988, -48.747347));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(15);
+        noMaritmo.setId(16);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.471141, -48.745631));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(16);
+        noMaritmo.setId(17);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.466161, -48.726254));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(17);
+        noMaritmo.setId(18);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.460565, -48.710842));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(18);
+        noMaritmo.setId(19);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.454226, -48.695049));
         nos.add(noMaritmo);
@@ -1567,60 +1667,323 @@ public class CarregadorDeRotas {
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(19);
+        noMaritmo.setId(20);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.443963, -48.684406));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(20);
+        noMaritmo.setId(21);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.412865, -48.686466));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(21);
+        noMaritmo.setId(22);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.261966, -48.626817));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(22);
+        noMaritmo.setId(23);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.252516, -48.626388));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(23);
+        noMaritmo.setId(24);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.245257, -48.648618));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(24);
+        noMaritmo.setId(25);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.244501, -48.655828));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(25);
+        noMaritmo.setId(26);
         noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Chegada Imbituba:Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-28.244156, -48.660440));
         nos.add(noMaritmo);
-;
+
+        Aresta aresta = new Aresta();
+        aresta.setId(1);
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(2);
+        aresta.setNoMaritmo1(nos.get(1));
+        aresta.setNoMaritmo2(nos.get(2));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(3);
+        aresta.setNoMaritmo1(nos.get(2));
+        aresta.setNoMaritmo2(nos.get(3));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(4);
+        aresta.setNoMaritmo1(nos.get(3));
+        aresta.setNoMaritmo2(nos.get(4));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(5);
+        aresta.setNoMaritmo1(nos.get(4));
+        aresta.setNoMaritmo2(nos.get(5));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(6);
+        aresta.setNoMaritmo1(nos.get(5));
+        aresta.setNoMaritmo2(nos.get(6));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(7);
+        aresta.setNoMaritmo1(nos.get(6));
+        aresta.setNoMaritmo2(nos.get(7));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(8);
+        aresta.setNoMaritmo1(nos.get(7));
+        aresta.setNoMaritmo2(nos.get(8));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(9);
+        aresta.setNoMaritmo1(nos.get(8));
+        aresta.setNoMaritmo2(nos.get(9));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(10);
+        aresta.setNoMaritmo1(nos.get(9));
+        aresta.setNoMaritmo2(nos.get(10));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(11);
+        aresta.setNoMaritmo1(nos.get(10));
+        aresta.setNoMaritmo2(nos.get(11));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(12);
+        aresta.setNoMaritmo1(nos.get(11));
+        aresta.setNoMaritmo2(nos.get(25));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(13);
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(12));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(14);
+        aresta.setNoMaritmo1(nos.get(12));
+        aresta.setNoMaritmo2(nos.get(13));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(15);
+        aresta.setNoMaritmo1(nos.get(13));
+        aresta.setNoMaritmo2(nos.get(14));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(16);
+        aresta.setNoMaritmo1(nos.get(14));
+        aresta.setNoMaritmo2(nos.get(15));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(17);
+        aresta.setNoMaritmo1(nos.get(15));
+        aresta.setNoMaritmo2(nos.get(16));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(18);
+        aresta.setNoMaritmo1(nos.get(16));
+        aresta.setNoMaritmo2(nos.get(17));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(19);
+        aresta.setNoMaritmo1(nos.get(17));
+        aresta.setNoMaritmo2(nos.get(18));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(20);
+        aresta.setNoMaritmo1(nos.get(18));
+        aresta.setNoMaritmo2(nos.get(19));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(21);
+        aresta.setNoMaritmo1(nos.get(19));
+        aresta.setNoMaritmo2(nos.get(20));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(22);
+        aresta.setNoMaritmo1(nos.get(20));
+        aresta.setNoMaritmo2(nos.get(6));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(23);
+        aresta.setNoMaritmo1(nos.get(10));
+        aresta.setNoMaritmo2(nos.get(21));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(24);
+        aresta.setNoMaritmo1(nos.get(21));
+        aresta.setNoMaritmo2(nos.get(22));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(25);
+        aresta.setNoMaritmo1(nos.get(22));
+        aresta.setNoMaritmo2(nos.get(23));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(26);
+        aresta.setNoMaritmo1(nos.get(23));
+        aresta.setNoMaritmo2(nos.get(24));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
 
 
 
+        aresta = new Aresta();
+        aresta.setId(27);
+        aresta.setNoMaritmo1(nos.get(24));
+        aresta.setNoMaritmo2(nos.get(25));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+//        Saida laguna /Chegada Imbitub
 
         Rotas rotas = new Rotas();
         rotas.setId(9);
-        rotas.setDescricao("Saida laguna /Chegada Imbituba");
+        rotas.setDescricao("CERTA 7");
         rotas.setArestas(mArestaList);
         rotas.setNosMaritmos(nos);
 
@@ -1685,69 +2048,69 @@ public class CarregadorDeRotas {
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(8);
+        noMaritmo.setId(9);
         noMaritmo.setmLocal("Taquara Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.006222, -48.577251));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(9);
+        noMaritmo.setId(10);
         noMaritmo.setmLocal("Taquara Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-26.998421, -48.579225));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(10);
+        noMaritmo.setId(11);
         noMaritmo.setmLocal("Saida de Taquara Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-26.993144, -48.578967));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(11);
+        noMaritmo.setId(12);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-26.989664, -48.585791));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(12);
+        noMaritmo.setId(13);
         noMaritmo.setmLocal("Praia de Laramjeiras Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-26.990162, -48.593086));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(13);
+        noMaritmo.setId(14);
         noMaritmo.setmLocal("Proximidades de Molhe da Barra Sul Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-26.994559, -48.603171));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(14);
+        noMaritmo.setId(15);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.000869, -48.614759));
         nos.add(noMaritmo);
 
 //        Caminho 2
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(15);
+        noMaritmo.setId(16);
         noMaritmo.setmLocal("Direção a ilha de porto Bello Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.146354, -48.543669));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(16);
+        noMaritmo.setId(17);
         noMaritmo.setmLocal("Ilha de Porto Belo Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.140320, -48.538562));
         nos.add(noMaritmo);
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(17);
+        noMaritmo.setId(18);
         noMaritmo.setmLocal("Saida da Ilha de Porto Belo Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.134783, -48.535988));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(18);
+        noMaritmo.setId(19);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.129092, -48.540708));
         nos.add(noMaritmo);
@@ -1755,32 +2118,249 @@ public class CarregadorDeRotas {
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(19);
+        noMaritmo.setId(20);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.120689, -48.565814));
         nos.add(noMaritmo);
 
 //        Liga com caminho 3
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(20);
+        noMaritmo.setId(21);
         noMaritmo.setmLocal("Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-27.106097, -48.539678));
         nos.add(noMaritmo);
 
 
         noMaritmo = new NoMaritmo();
-        noMaritmo.setId(21);
+        noMaritmo.setId(22);
         noMaritmo.setmIcon(R.drawable.chegada);
         noMaritmo.setmLocal("Praia central de Balneario Camburiú Oceano Atlântico Sul");
         noMaritmo.setPosicao(new LatLng(-26.995219, -48.622677));
         nos.add(noMaritmo);
 
+        Aresta aresta = new Aresta();
+        aresta.setId(1);
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(1));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(2);
+        aresta.setNoMaritmo1(nos.get(1));
+        aresta.setNoMaritmo2(nos.get(2));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(3);
+        aresta.setNoMaritmo1(nos.get(2));
+        aresta.setNoMaritmo2(nos.get(3));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(4);
+        aresta.setNoMaritmo1(nos.get(3));
+        aresta.setNoMaritmo2(nos.get(4));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(5);
+        aresta.setNoMaritmo1(nos.get(4));
+        aresta.setNoMaritmo2(nos.get(5));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(6);
+        aresta.setNoMaritmo1(nos.get(5));
+        aresta.setNoMaritmo2(nos.get(6));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(7);
+        aresta.setNoMaritmo1(nos.get(6));
+        aresta.setNoMaritmo2(nos.get(7));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(8);
+        aresta.setNoMaritmo1(nos.get(7));
+        aresta.setNoMaritmo2(nos.get(8));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(9);
+        aresta.setNoMaritmo1(nos.get(8));
+        aresta.setNoMaritmo2(nos.get(9));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(10);
+        aresta.setNoMaritmo1(nos.get(9));
+        aresta.setNoMaritmo2(nos.get(10));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(11);
+        aresta.setNoMaritmo1(nos.get(10));
+        aresta.setNoMaritmo2(nos.get(11));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(12);
+        aresta.setNoMaritmo1(nos.get(11));
+        aresta.setNoMaritmo2(nos.get(12));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(13);
+        aresta.setNoMaritmo1(nos.get(12));
+        aresta.setNoMaritmo2(nos.get(13));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(14);
+        aresta.setNoMaritmo1(nos.get(13));
+        aresta.setNoMaritmo2(nos.get(14));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(15);
+        aresta.setNoMaritmo1(nos.get(14));
+        aresta.setNoMaritmo2(nos.get(21));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(16);
+        aresta.setNoMaritmo1(nos.get(0));
+        aresta.setNoMaritmo2(nos.get(15));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(17);
+        aresta.setNoMaritmo1(nos.get(15));
+        aresta.setNoMaritmo2(nos.get(16));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(18);
+        aresta.setNoMaritmo1(nos.get(16));
+        aresta.setNoMaritmo2(nos.get(17));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(19);
+        aresta.setNoMaritmo1(nos.get(17));
+        aresta.setNoMaritmo2(nos.get(18));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+
+        aresta = new Aresta();
+        aresta.setId(20);
+        aresta.setNoMaritmo1(nos.get(18));
+        aresta.setNoMaritmo2(nos.get(19));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(21);
+        aresta.setNoMaritmo1(nos.get(19));
+        aresta.setNoMaritmo2(nos.get(20));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
+        aresta = new Aresta();
+        aresta.setId(22);
+        aresta.setNoMaritmo1(nos.get(20));
+        aresta.setNoMaritmo2(nos.get(5));
+        aresta.setCorrente(true);
+        aresta.setVento(true);
+        aresta.setDistancia(50D);
+        mArestaList.add(aresta);
+
         Rotas rotas = new Rotas();
-        rotas.setId(10);
+        rotas.setId(23);
         rotas.setDescricao(" Porto Belo /Balneario Camburiú");
         rotas.setArestas(mArestaList);
         rotas.setNosMaritmos(nos);
 
         return rotas;
     }
+
+
+
 }
