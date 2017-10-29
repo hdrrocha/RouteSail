@@ -118,58 +118,26 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void carregarGrafo() {
         map.clear();
         for (NoMaritmo no : nos) {
-            MarkerOptions marker = new MarkerOptions().position(no.getPosicao()).title(no.getmLocal() +  no.getId());
+            MarkerOptions marker = new MarkerOptions().position(no.getPosicao()).title(String.valueOf(no.getId()-1));
 
             if(no.getmIcon()!= 0){
                 marker.icon(BitmapDescriptorFactory.fromResource(no.getmIcon()));
             }else {
                 marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.no));
             }
-
+            map.moveCamera(CameraUpdateFactory.newLatLng(no.getPosicao()));
+            map.animateCamera( CameraUpdateFactory.zoomTo( 11.0f ) );
             map.addMarker(marker);
 
-
-            for (Aresta aresta :  getArestas(no)) {
-                PolylineOptions polylineOptions = new PolylineOptions();
-                if(getPossibilidades(no, aresta)){
-                    polylineOptions.color(Color.GREEN);
-                }else {
-                    polylineOptions.color(Color.RED);
-                }
-                polylineOptions.width(aresta.getCorrente());
-//                if(getPossibilidades(no, aresta)){
-//
-//                }
-                polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
-                polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
-                map.addPolyline(polylineOptions);
+            List<Aresta> arestas = new ArrayList<>();
+            arestas.addAll(getArestas(no));
+            if (!arestas.isEmpty()) {
+                pintaMelhorAresta(arestas, no);
             }
         }
-
-//        for (Aresta aresta : mArestaList) {
-//            getArestas(no);
-//            PolylineOptions polylineOptions = new PolylineOptions();
-////            switch (aresta.getVento()) {
-////                case 1:
-////                    polylineOptions.color(Color.GREEN);
-////                    break;
-////                case 2:
-////                    polylineOptions.color(Color.YELLOW);
-////                    break;
-////                case 3:
-////                    polylineOptions.color(Color.RED);
-////                    break;
-////            }
-//
-//            polylineOptions.width(aresta.getCorrente());
-//            getPossibilidades(no, mArestaList);
-//            polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
-//            polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
-//            map.addPolyline(polylineOptions);
-//        }
     }
 
-    private List<Aresta>  getArestas(NoMaritmo mNoa) {
+    private List<Aresta> getArestas(NoMaritmo mNoa) {
         List<Aresta> arestasFilter = new ArrayList<>();
         for (Aresta aresta : mArestaList) {
             if(aresta.getNoMaritmo1().getId() == mNoa.getId()){
@@ -179,46 +147,98 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return arestasFilter;
     }
 
-    private boolean   getPossibilidades(NoMaritmo mNo, Aresta mresta) {
-        //valida se a corrente está a favor
-        if (validaCorrente(mresta)) {
-            //valida se o vento esta contra
-            if (validaVento(mresta)) {
-                //pinta linha
-                //faz soma
-              return true;
-            }
+    private void pintaMelhorAresta(List<Aresta> arestas, NoMaritmo no) {
+        Aresta melhorAresta = arestas.get(0);
 
-        }//valida se a corrente esta a favor
-        else if (validaCorrente(mresta)) {
-            //valida se o vento esta contra
-            if (!validaVento(mresta)) {
-                //pinta linha
-                //faz soma
-                return true;
+        for (Aresta aresta : arestas) {
+            melhorAresta = getMelhorAresta(melhorAresta, aresta);
+        }
+
+        PolylineOptions polylineOptions = new PolylineOptions();
+        polylineOptions.color(Color.GREEN);
+        polylineOptions.width(5);
+        polylineOptions.add(melhorAresta.getNoMaritmo1().getPosicao());
+        polylineOptions.add(melhorAresta.getNoMaritmo2().getPosicao());
+        map.addPolyline(polylineOptions);
+
+        for (Aresta aresta : arestas) {
+            if (aresta.getId() != melhorAresta.getId()) {
+                polylineOptions = new PolylineOptions();
+                polylineOptions.color(Color.RED);
+                polylineOptions.width(5);
+                polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
+                polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
+                map.addPolyline(polylineOptions);
+            }
+        }
+    }
+
+    private Aresta getMelhorAresta(Aresta primeira, Aresta segunda) {
+        if (validaCorrente(primeira) && validaVento(primeira) && validaCorrente(segunda) && validaVento(segunda)) {
+            if (validaDistanciaTrue(primeira) && validaDistanciaFalse(segunda)) {
+                return primeira;
+            } else {
+                return segunda;
+            }
+        } else {
+            if (validaCorrente(primeira) && validaVento(primeira) && (!validaCorrente(segunda) || !validaVento(segunda))) {
+                return primeira;
+            } else if (validaCorrente(primeira) && !validaVento(primeira) && (validaCorrente(segunda) || !validaVento(segunda))) {
+                if (validaDistanciaTrue(primeira) && validaDistanciaFalse(segunda)) {
+                    return primeira;
+                } else {
+                    return segunda;
+                }
+            } else if (!validaCorrente(primeira) && !validaVento(primeira) && (!validaCorrente(segunda) || !validaVento(segunda))) {
+                if (validaDistanciaTrue(primeira) && validaDistanciaFalse(segunda)) {
+                    return primeira;
+                } else {
+                    return segunda;
+                }
             }
 
         }
-//        else if(verificaDistancias(mNo)){
-//            //pinta amenor distancia
-//        }
-        return false;
+        return primeira;
     }
 
-//    private boolean verificaDistancias(NoMaritmo noMaritmo) {
+
+//    private boolean  getPossibilidades( Aresta mresta) {
+//        //valida se a corrente está a favor e   /valida se o vento esta contra
+//        if (validaCorrente(mresta) && validaVento(mresta)) {
+//                return true;
+//
+//        }//valida se a corrente esta a favor ev alida se o vento esta contra
+//        else if (validaCorrente(mresta) && !validaVento(mresta)) {
+//                //pinta linha
+//                //faz soma
+//                return true;
+//        }
+//        else if(verificaDistancias(mresta)){
+//            //pinta amenor distancia
+//        }
+//        return false;
+//    }
+
+    private boolean validaDistanciaTrue(Aresta mresta) {
 //        noMaritmo.getmAresta();
 //        if(noMaritmo.get)
-//        return true;
-//    }
+            return true;
+    }
+
+    private boolean validaDistanciaFalse(Aresta mresta) {
+//        noMaritmo.getmAresta();
+//        if(noMaritmo.get)
+        return true;
+    }
 
 
     private boolean validaCorrente( Aresta mresta) {
-        return  mresta.getCorrente() == 1;
+        return  mresta.getCorrente() == true;
     }
 
     private boolean validaVento(Aresta mresta) {
 
-        return  mresta.getVento() == 1;
+        return  mresta.getVento() == true;
     }
 
     private Double caclulaVelocidadeTempo(Double velBarco,Double velCorrente){

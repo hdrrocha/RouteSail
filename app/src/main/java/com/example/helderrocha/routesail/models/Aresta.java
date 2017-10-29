@@ -9,8 +9,8 @@ public class Aresta {
     private NoMaritmo mNoMaritmo1;
     private NoMaritmo mNoMaritmo2;
     private Double mDistancia;
-    private Integer mVento;
-    private Integer mCorrente;
+    private boolean mVento;
+    private boolean mCorrente;
 
     public int getId() {
         return mId;
@@ -44,19 +44,19 @@ public class Aresta {
         this.mDistancia = mDistancia;
     }
 
-    public Integer getVento() {
+    public boolean getVento() {
         return mVento;
     }
 
-    public void setVento(Integer mVento) {
+    public void setVento(boolean mVento) {
         this.mVento = mVento;
     }
 
-    public Integer getCorrente() {
+    public boolean getCorrente() {
         return mCorrente;
     }
 
-    public void setCorrente(Integer mCorrente) {
+    public void setCorrente(boolean mCorrente) {
         this.mCorrente = mCorrente;
     }
 }
