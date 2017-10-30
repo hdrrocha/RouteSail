@@ -11,6 +11,7 @@ public class Aresta {
     private Double mDistancia;
     private boolean mVento;
     private boolean mCorrente;
+    private boolean melhorAresta;
 
     public int getId() {
         return mId;
@@ -58,5 +59,13 @@ public class Aresta {
 
     public void setCorrente(boolean mCorrente) {
         this.mCorrente = mCorrente;
+    }
+
+    public boolean isMelhorAresta() {
+        return melhorAresta;
+    }
+
+    public void setMelhorAresta(boolean melhorAresta) {
+        this.melhorAresta = melhorAresta;
     }
 }

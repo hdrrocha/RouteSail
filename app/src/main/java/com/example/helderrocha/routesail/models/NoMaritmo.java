@@ -13,6 +13,8 @@ public class NoMaritmo {
     private LatLng mPosicao;
     private String mLocal;
     private int mIcon;
+    private boolean isInicial;
+
 
     private List<Aresta> mAresta;
 
@@ -54,5 +56,13 @@ public class NoMaritmo {
 
     public void setmAresta(List<Aresta> mAresta) {
         this.mAresta = mAresta;
+    }
+
+    public boolean isInicial() {
+        return isInicial;
+    }
+
+    public void setInicial(boolean inicial) {
+        isInicial = inicial;
     }
 }

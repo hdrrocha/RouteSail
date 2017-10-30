@@ -57,6 +57,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private List<NoMaritmo> nos;
     private List<Aresta> mArestaList;
     private List<Rotas> mRotas;
+    List<Aresta> mMelhoresArestas;
+    List<Aresta> mPioresresArestas;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,59 +122,105 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void carregarGrafo() {
+        mPioresresArestas = new ArrayList<>();
+        mMelhoresArestas =  new ArrayList<>();
         map.clear();
+
         for (NoMaritmo no : nos) {
 
             MarkerOptions marker = new MarkerOptions().position(no.getPosicao()).title(String.valueOf(no.getId()-1));
 
-            LatLng latLngFrom = new LatLng(-27.221764, -48.513335);
-            LatLng latLngTo = new LatLng(-27.299893, -48.540114);
-            if(latLngFrom != null && latLngTo != null){
-                Double valor = CalculationByDistance(latLngFrom, latLngTo);
-                Log.i("Hedler: " , valor.toString());
-            }
-
-
-            if(no.getmIcon()!= 0){
+            if (no.getmIcon()!= 0) {
                 marker.icon(BitmapDescriptorFactory.fromResource(no.getmIcon()));
-            }else {
+            } else {
                 marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.no));
             }
             map.moveCamera(CameraUpdateFactory.newLatLng(no.getPosicao()));
             map.animateCamera( CameraUpdateFactory.zoomTo( 11.0f ) );
             map.addMarker(marker);
 
-            List<Aresta> arestas = new ArrayList<>();
-            arestas.addAll(getArestas(no));
-            if (!arestas.isEmpty()) {
-                pintaMelhorAresta(arestas, no);
+//            List<Aresta> arestas = new ArrayList<>();
+//            arestas.addAll(getArestas(no));
+//            if (!arestas.isEmpty()) {
+//                pintaMelhorAresta(arestas, no);
+//            }
+        }
+        buildRoute(nos.get(0));
+
+        caclulaVelocidadeMedia(mMelhoresArestas);
+    }
+
+    // => Begin
+
+    private void buildRoute(NoMaritmo no) {
+        List<Aresta> arestas = new ArrayList<>();
+        arestas.addAll(getArestas(no));
+        Aresta melhorAresta = new Aresta();
+        if (!arestas.isEmpty()) {
+            melhorAresta = getMelhorAresta(arestas);
+            mMelhoresArestas.add(melhorAresta);
+            NoMaritmo proximoNo = melhorAresta.getNoMaritmo2();
+            if (proximoNo != null) {
+                buildRoute(proximoNo);
+            } else {
+                finishBuildRoute();
+            }
+        } else {
+            finishBuildRoute();
+        }
+
+    }
+
+    private void finishBuildRoute() {
+        for (Aresta aresta: mArestaList) {
+            Boolean existeMelhorAresta = false;
+            for (Aresta melhorAresta: mMelhoresArestas) {
+                if (aresta.getId() == melhorAresta.getId()) {
+                    existeMelhorAresta = true;
+                }
+            }
+            if (!existeMelhorAresta) {
+                mPioresresArestas.add(aresta);
             }
         }
+        for (Aresta aresta: mPioresresArestas) {
+            printPiorAresta(aresta);
+        }
+        for (Aresta aresta: mMelhoresArestas) {
+            printAresta(aresta);
+        }
     }
-    public double CalculationByDistance(LatLng StartP, LatLng EndP) {
-        int Radius = 6371;// radius of earth in Km
-        double lat1 = StartP.latitude;
-        double lat2 = EndP.latitude;
-        double lon1 = StartP.longitude;
-        double lon2 = EndP.longitude;
-        double dLat = Math.toRadians(lat2 - lat1);
-        double dLon = Math.toRadians(lon2 - lon1);
-        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
-                + Math.cos(Math.toRadians(lat1))
-                * Math.cos(Math.toRadians(lat2)) * Math.sin(dLon / 2)
-                * Math.sin(dLon / 2);
-        double c = 2 * Math.asin(Math.sqrt(a));
-        double valueResult = Radius * c;
-        double km = valueResult / 1;
-        DecimalFormat newFormat = new DecimalFormat("####");
-        int kmInDec = Integer.valueOf(newFormat.format(km));
-        double meter = valueResult % 1000;
-        int meterInDec = Integer.valueOf(newFormat.format(meter));
-        Log.i("Radius Value", "" + valueResult + "   KM  " + kmInDec
-                + " Metros   " + meterInDec);
 
-        return Radius * c;
+    private Aresta getMelhorAresta(List<Aresta> arestas) {
+        Aresta melhorAresta = arestas.get(0);
+        for (Aresta aresta : arestas) {
+            aresta.setDistancia(CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
+            Log.i("Aresta "+aresta.getId()+": " , String.valueOf(aresta.getDistancia()));
+            melhorAresta = getMelhorAresta(melhorAresta, aresta);
+        }
+        return melhorAresta;
     }
+
+    private void printAresta(Aresta aresta) {
+        PolylineOptions polylineOptions = new PolylineOptions();
+        polylineOptions.color(Color.GREEN);
+        polylineOptions.width(5);
+        polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
+        polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
+        map.addPolyline(polylineOptions);
+    }
+
+    private void printPiorAresta(Aresta aresta) {
+        PolylineOptions polylineOptions = new PolylineOptions();
+        polylineOptions.color(Color.RED);
+        polylineOptions.width(5);
+        polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
+        polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
+        map.addPolyline(polylineOptions);
+    }
+
+    // => End
+
     private List<Aresta> getArestas(NoMaritmo mNoa) {
         List<Aresta> arestasFilter = new ArrayList<>();
         for (Aresta aresta : mArestaList) {
@@ -187,7 +235,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         Aresta melhorAresta = arestas.get(0);
 
         for (Aresta aresta : arestas) {
+            aresta.setDistancia(CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
+            Log.i("Aresta "+aresta.getId()+": " , String.valueOf(aresta.getDistancia()));
             melhorAresta = getMelhorAresta(melhorAresta, aresta);
+            if(melhorAresta.isMelhorAresta()){
+                mMelhoresArestas.add(melhorAresta);
+            }
+
         }
 
         PolylineOptions polylineOptions = new PolylineOptions();
@@ -197,23 +251,42 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         polylineOptions.add(melhorAresta.getNoMaritmo2().getPosicao());
         map.addPolyline(polylineOptions);
 
-        for (Aresta aresta : arestas) {
-            aresta.setDistancia(CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
-            Log.i("Aresta "+aresta.getId()+": " , String.valueOf(aresta.getDistancia()));
-            if (aresta.getId() != melhorAresta.getId()) {
-                polylineOptions = new PolylineOptions();
-                polylineOptions.color(Color.RED);
-                polylineOptions.width(5);
-                polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
-                polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
-                map.addPolyline(polylineOptions);
+//        for (Aresta aresta : arestas) {
+//
+//            if (aresta.getId() != melhorAresta.getId()) {
+//                polylineOptions = new PolylineOptions();
+//                polylineOptions.color(Color.RED);
+//                polylineOptions.width(5);
+//                polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
+//                polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
+//                map.addPolyline(polylineOptions);
+//            }
+//        }
+
+
+    }
+
+    private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
+        Double distanciaTotal = null;
+        Double distanciaTotalold = null;
+        for (Aresta aresta : mMelhoresArestas) {
+            if(distanciaTotal != null){
+                distanciaTotalold =  distanciaTotal;
             }
+            distanciaTotal =  aresta.getDistancia();
+
+            if(distanciaTotalold != null){
+                distanciaTotal = aresta.getDistancia() + distanciaTotalold;
+            }
+
         }
+
+        Log.i("distanciaTotal", String.valueOf(distanciaTotal));
     }
 
     private Aresta getMelhorAresta(Aresta primeira, Aresta segunda) {
         if (validaCorrente(primeira) && validaVento(primeira) && validaCorrente(segunda) && validaVento(segunda)) {
-            if (validaDistanciaTrue(primeira) && validaDistanciaFalse(segunda)) {
+            if (primeira.getDistancia() < segunda.getDistancia()) {
                 return primeira;
             } else {
                 return segunda;
@@ -222,13 +295,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             if (validaCorrente(primeira) && validaVento(primeira) && (!validaCorrente(segunda) || !validaVento(segunda))) {
                 return primeira;
             } else if (validaCorrente(primeira) && !validaVento(primeira) && (validaCorrente(segunda) || !validaVento(segunda))) {
-                if (validaDistanciaTrue(primeira) && validaDistanciaFalse(segunda)) {
+                if (primeira.getDistancia() < segunda.getDistancia()) {
                     return primeira;
                 } else {
                     return segunda;
                 }
             } else if (!validaCorrente(primeira) && !validaVento(primeira) && (!validaCorrente(segunda) || !validaVento(segunda))) {
-                if (validaDistanciaTrue(primeira) && validaDistanciaFalse(segunda)) {
+                if (primeira.getDistancia() < segunda.getDistancia()) {
                     return primeira;
                 } else {
                     return segunda;
@@ -264,5 +337,38 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private Double caclulaVelocidadeTempo(Double velBarco,Double velCorrente){
         return velCorrente + velBarco;
+    }
+
+    public double CalculationByDistance(LatLng StartP, LatLng EndP) {
+        int Radius = 6371;// radius of earth in Km
+        double lat1 = StartP.latitude;
+        double lat2 = EndP.latitude;
+        double lon1 = StartP.longitude;
+        double lon2 = EndP.longitude;
+        double dLat = Math.toRadians(lat2 - lat1);
+        double dLon = Math.toRadians(lon2 - lon1);
+        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+                + Math.cos(Math.toRadians(lat1))
+                * Math.cos(Math.toRadians(lat2)) * Math.sin(dLon / 2)
+                * Math.sin(dLon / 2);
+        double c = 2 * Math.asin(Math.sqrt(a));
+        double valueResult = Radius * c;
+        double km = valueResult / 1;
+        DecimalFormat newFormat = new DecimalFormat("####");
+        int kmInDec = Integer.valueOf(newFormat.format(km));
+        double meter = valueResult % 1000;
+        int meterInDec = Integer.valueOf(newFormat.format(meter));
+        Log.i("Radius Value", "" + valueResult + "   KM  " + kmInDec
+                + " Metros   " + meterInDec);
+
+        return Radius * c;
+    }
+
+    public  void  addMelhoresArestas(Aresta aresta){
+        mMelhoresArestas.add(aresta);
+    }
+
+    public  void  addPioresArestas(Aresta aresta){
+        mMelhoresArestas.add(aresta);
     }
 }
