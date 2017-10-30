@@ -134,8 +134,8 @@ public class CarregadorDeRotas {
         aresta.setId(1);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -143,8 +143,8 @@ public class CarregadorDeRotas {
         aresta.setId(2);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -153,8 +153,8 @@ public class CarregadorDeRotas {
         aresta.setId(3);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(2));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -162,8 +162,8 @@ public class CarregadorDeRotas {
         aresta.setId(4);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -171,8 +171,8 @@ public class CarregadorDeRotas {
         aresta.setId(5);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -180,8 +180,8 @@ public class CarregadorDeRotas {
         aresta.setId(6);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -190,8 +190,8 @@ public class CarregadorDeRotas {
         aresta.setId(7);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -199,8 +199,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -209,8 +209,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(4));
         aresta.setNoMaritmo2(nos.get(8));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -219,8 +219,8 @@ public class CarregadorDeRotas {
         aresta.setId(9);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -228,7 +228,7 @@ public class CarregadorDeRotas {
         aresta.setId(10);
         aresta.setNoMaritmo1(nos.get(5));
         aresta.setNoMaritmo2(nos.get(6));
-        aresta.setCorrente(true);
+        aresta.setCorrente(false);
         aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
@@ -237,8 +237,8 @@ public class CarregadorDeRotas {
         aresta.setId(11);
         aresta.setNoMaritmo1(nos.get(6));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(400D);
         mArestaList.add(aresta);
 
@@ -247,7 +247,7 @@ public class CarregadorDeRotas {
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(8));
         aresta.setCorrente(false);
-        aresta.setVento(true);
+        aresta.setVento(false);
         aresta.setDistancia(40D);
         mArestaList.add(aresta);
 
@@ -378,8 +378,8 @@ public class CarregadorDeRotas {
         aresta.setId(1);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -387,8 +387,8 @@ public class CarregadorDeRotas {
         aresta.setId(2);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(2));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -397,8 +397,8 @@ public class CarregadorDeRotas {
         aresta.setId(3);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -406,8 +406,8 @@ public class CarregadorDeRotas {
         aresta.setId(4);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -415,8 +415,8 @@ public class CarregadorDeRotas {
         aresta.setId(5);
         aresta.setNoMaritmo1(nos.get(4));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -424,8 +424,8 @@ public class CarregadorDeRotas {
         aresta.setId(6);
         aresta.setNoMaritmo1(nos.get(5));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -433,8 +433,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(16));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -442,8 +442,8 @@ public class CarregadorDeRotas {
         aresta.setId(9);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(8));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -452,8 +452,8 @@ public class CarregadorDeRotas {
         aresta.setId(10);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -462,8 +462,8 @@ public class CarregadorDeRotas {
         aresta.setId(11);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -471,8 +471,8 @@ public class CarregadorDeRotas {
         aresta.setId(12);
         aresta.setNoMaritmo1(nos.get(9));
         aresta.setNoMaritmo2(nos.get(10));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -480,8 +480,8 @@ public class CarregadorDeRotas {
         aresta.setId(13);
         aresta.setNoMaritmo1(nos.get(10));
         aresta.setNoMaritmo2(nos.get(11));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -489,8 +489,8 @@ public class CarregadorDeRotas {
         aresta.setId(13);
         aresta.setNoMaritmo1(nos.get(11));
         aresta.setNoMaritmo2(nos.get(12));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -498,8 +498,8 @@ public class CarregadorDeRotas {
         aresta.setId(14);
         aresta.setNoMaritmo1(nos.get(12));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -507,8 +507,8 @@ public class CarregadorDeRotas {
         aresta.setId(15);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(13));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -516,8 +516,8 @@ public class CarregadorDeRotas {
         aresta.setId(16);
         aresta.setNoMaritmo1(nos.get(13));
         aresta.setNoMaritmo2(nos.get(10));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -675,8 +675,8 @@ public class CarregadorDeRotas {
         aresta.setId(1);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -684,8 +684,8 @@ public class CarregadorDeRotas {
         aresta.setId(3);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(2));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -693,8 +693,8 @@ public class CarregadorDeRotas {
         aresta.setId(4);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -702,8 +702,8 @@ public class CarregadorDeRotas {
         aresta.setId(5);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -711,8 +711,8 @@ public class CarregadorDeRotas {
         aresta.setId(6);
         aresta.setNoMaritmo1(nos.get(4));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -720,8 +720,8 @@ public class CarregadorDeRotas {
         aresta.setId(7);
         aresta.setNoMaritmo1(nos.get(5));
         aresta.setNoMaritmo2(nos.get(6));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -729,8 +729,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(6));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -739,8 +739,8 @@ public class CarregadorDeRotas {
         aresta.setId(9);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(8));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -749,8 +749,8 @@ public class CarregadorDeRotas {
         aresta.setId(10);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(12));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -759,8 +759,8 @@ public class CarregadorDeRotas {
         aresta.setId(11);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(17));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -768,8 +768,8 @@ public class CarregadorDeRotas {
         aresta.setId(12);
         aresta.setNoMaritmo1(nos.get(12));
         aresta.setNoMaritmo2(nos.get(13));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -777,8 +777,8 @@ public class CarregadorDeRotas {
         aresta.setId(13);
         aresta.setNoMaritmo1(nos.get(13));
         aresta.setNoMaritmo2(nos.get(14));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -786,8 +786,8 @@ public class CarregadorDeRotas {
         aresta.setId(14);
         aresta.setNoMaritmo1(nos.get(16));
         aresta.setNoMaritmo2(nos.get(17));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -796,8 +796,8 @@ public class CarregadorDeRotas {
         aresta.setId(15);
         aresta.setNoMaritmo1(nos.get(17));
         aresta.setNoMaritmo2(nos.get(18));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -805,8 +805,8 @@ public class CarregadorDeRotas {
         aresta.setId(16);
         aresta.setNoMaritmo1(nos.get(18));
         aresta.setNoMaritmo2(nos.get(19));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -814,8 +814,8 @@ public class CarregadorDeRotas {
         aresta.setId(17);
         aresta.setNoMaritmo1(nos.get(19));
         aresta.setNoMaritmo2(nos.get(20));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -823,8 +823,8 @@ public class CarregadorDeRotas {
         aresta.setId(18);
         aresta.setNoMaritmo1(nos.get(21));
         aresta.setNoMaritmo2(nos.get(15));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -833,8 +833,8 @@ public class CarregadorDeRotas {
         aresta.setId(19);
         aresta.setNoMaritmo1(nos.get(14));
         aresta.setNoMaritmo2(nos.get(15));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -844,8 +844,8 @@ public class CarregadorDeRotas {
         aresta.setId(20);
         aresta.setNoMaritmo1(nos.get(13));
         aresta.setNoMaritmo2(nos.get(14));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -854,8 +854,8 @@ public class CarregadorDeRotas {
         aresta.setId(21);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -863,8 +863,8 @@ public class CarregadorDeRotas {
         aresta.setId(22);
         aresta.setNoMaritmo1(nos.get(9));
         aresta.setNoMaritmo2(nos.get(10));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -872,8 +872,8 @@ public class CarregadorDeRotas {
         aresta.setId(23);
         aresta.setNoMaritmo1(nos.get(20));
         aresta.setNoMaritmo2(nos.get(15));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -881,8 +881,8 @@ public class CarregadorDeRotas {
         aresta.setId(24);
         aresta.setNoMaritmo1(nos.get(10));
         aresta.setNoMaritmo2(nos.get(11));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 //        Praia dos Açores Enseada do Pântano do Sul/Praia da Ponta do papagaio
@@ -969,8 +969,8 @@ public class CarregadorDeRotas {
         aresta.setId(1);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -979,8 +979,8 @@ public class CarregadorDeRotas {
         aresta.setId(2);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(2));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -989,8 +989,8 @@ public class CarregadorDeRotas {
         aresta.setId(3);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -999,8 +999,8 @@ public class CarregadorDeRotas {
         aresta.setId(4);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1009,8 +1009,8 @@ public class CarregadorDeRotas {
         aresta.setId(5);
         aresta.setNoMaritmo1(nos.get(4));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1019,8 +1019,8 @@ public class CarregadorDeRotas {
         aresta.setId(6);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1029,8 +1029,8 @@ public class CarregadorDeRotas {
         aresta.setId(7);
         aresta.setNoMaritmo1(nos.get(5));
         aresta.setNoMaritmo2(nos.get(6));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1039,8 +1039,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(6));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1049,8 +1049,8 @@ public class CarregadorDeRotas {
         aresta.setId(9);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(8));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1059,8 +1059,8 @@ public class CarregadorDeRotas {
         aresta.setId(10);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1202,8 +1202,8 @@ public class CarregadorDeRotas {
         aresta.setId(1);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1212,8 +1212,8 @@ public class CarregadorDeRotas {
         aresta.setId(2);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(8));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1222,8 +1222,8 @@ public class CarregadorDeRotas {
         aresta.setId(3);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(2));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1232,8 +1232,8 @@ public class CarregadorDeRotas {
         aresta.setId(4);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1242,8 +1242,8 @@ public class CarregadorDeRotas {
         aresta.setId(5);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1252,8 +1252,8 @@ public class CarregadorDeRotas {
         aresta.setId(6);
         aresta.setNoMaritmo1(nos.get(4));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1262,8 +1262,8 @@ public class CarregadorDeRotas {
         aresta.setId(7);
         aresta.setNoMaritmo1(nos.get(5));
         aresta.setNoMaritmo2(nos.get(13));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1272,8 +1272,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1282,8 +1282,8 @@ public class CarregadorDeRotas {
         aresta.setId(9);
         aresta.setNoMaritmo1(nos.get(9));
         aresta.setNoMaritmo2(nos.get(10));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1292,8 +1292,8 @@ public class CarregadorDeRotas {
         aresta.setId(10);
         aresta.setNoMaritmo1(nos.get(10));
         aresta.setNoMaritmo2(nos.get(11));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1302,8 +1302,8 @@ public class CarregadorDeRotas {
         aresta.setId(11);
         aresta.setNoMaritmo1(nos.get(6));
         aresta.setNoMaritmo2(nos.get(14));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1312,8 +1312,8 @@ public class CarregadorDeRotas {
         aresta.setId(12);
         aresta.setNoMaritmo1(nos.get(11));
         aresta.setNoMaritmo2(nos.get(12));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1321,8 +1321,8 @@ public class CarregadorDeRotas {
         aresta.setId(13);
         aresta.setNoMaritmo1(nos.get(15));
         aresta.setNoMaritmo2(nos.get(16));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1331,8 +1331,8 @@ public class CarregadorDeRotas {
         aresta.setId(14);
         aresta.setNoMaritmo1(nos.get(6));
         aresta.setNoMaritmo2(nos.get(12));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1341,8 +1341,8 @@ public class CarregadorDeRotas {
         aresta.setId(15);
         aresta.setNoMaritmo1(nos.get(13));
         aresta.setNoMaritmo2(nos.get(14));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1351,8 +1351,8 @@ public class CarregadorDeRotas {
         aresta.setId(16);
         aresta.setNoMaritmo1(nos.get(14));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1361,8 +1361,8 @@ public class CarregadorDeRotas {
         aresta.setId(17);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(15));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1370,8 +1370,8 @@ public class CarregadorDeRotas {
         aresta.setId(18);
         aresta.setNoMaritmo1(nos.get(14));
         aresta.setNoMaritmo2(nos.get(15));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1379,8 +1379,8 @@ public class CarregadorDeRotas {
         aresta.setId(19);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(16));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1718,8 +1718,8 @@ public class CarregadorDeRotas {
         aresta.setId(1);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1728,8 +1728,8 @@ public class CarregadorDeRotas {
         aresta.setId(2);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(2));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1738,8 +1738,8 @@ public class CarregadorDeRotas {
         aresta.setId(3);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1748,8 +1748,8 @@ public class CarregadorDeRotas {
         aresta.setId(4);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1758,8 +1758,8 @@ public class CarregadorDeRotas {
         aresta.setId(5);
         aresta.setNoMaritmo1(nos.get(4));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1768,8 +1768,8 @@ public class CarregadorDeRotas {
         aresta.setId(6);
         aresta.setNoMaritmo1(nos.get(5));
         aresta.setNoMaritmo2(nos.get(6));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1778,8 +1778,8 @@ public class CarregadorDeRotas {
         aresta.setId(7);
         aresta.setNoMaritmo1(nos.get(6));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1788,8 +1788,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(8));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1798,8 +1798,8 @@ public class CarregadorDeRotas {
         aresta.setId(9);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1808,8 +1808,8 @@ public class CarregadorDeRotas {
         aresta.setId(10);
         aresta.setNoMaritmo1(nos.get(9));
         aresta.setNoMaritmo2(nos.get(10));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1818,8 +1818,8 @@ public class CarregadorDeRotas {
         aresta.setId(11);
         aresta.setNoMaritmo1(nos.get(10));
         aresta.setNoMaritmo2(nos.get(11));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1828,8 +1828,8 @@ public class CarregadorDeRotas {
         aresta.setId(12);
         aresta.setNoMaritmo1(nos.get(11));
         aresta.setNoMaritmo2(nos.get(25));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1837,8 +1837,8 @@ public class CarregadorDeRotas {
         aresta.setId(13);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(12));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1847,8 +1847,8 @@ public class CarregadorDeRotas {
         aresta.setId(14);
         aresta.setNoMaritmo1(nos.get(12));
         aresta.setNoMaritmo2(nos.get(13));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1857,8 +1857,8 @@ public class CarregadorDeRotas {
         aresta.setId(15);
         aresta.setNoMaritmo1(nos.get(13));
         aresta.setNoMaritmo2(nos.get(14));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1867,8 +1867,8 @@ public class CarregadorDeRotas {
         aresta.setId(16);
         aresta.setNoMaritmo1(nos.get(14));
         aresta.setNoMaritmo2(nos.get(15));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1877,8 +1877,8 @@ public class CarregadorDeRotas {
         aresta.setId(17);
         aresta.setNoMaritmo1(nos.get(15));
         aresta.setNoMaritmo2(nos.get(16));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1886,8 +1886,8 @@ public class CarregadorDeRotas {
         aresta.setId(18);
         aresta.setNoMaritmo1(nos.get(16));
         aresta.setNoMaritmo2(nos.get(17));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1895,8 +1895,8 @@ public class CarregadorDeRotas {
         aresta.setId(19);
         aresta.setNoMaritmo1(nos.get(17));
         aresta.setNoMaritmo2(nos.get(18));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1905,8 +1905,8 @@ public class CarregadorDeRotas {
         aresta.setId(20);
         aresta.setNoMaritmo1(nos.get(18));
         aresta.setNoMaritmo2(nos.get(19));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1914,8 +1914,8 @@ public class CarregadorDeRotas {
         aresta.setId(21);
         aresta.setNoMaritmo1(nos.get(19));
         aresta.setNoMaritmo2(nos.get(20));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1923,8 +1923,8 @@ public class CarregadorDeRotas {
         aresta.setId(22);
         aresta.setNoMaritmo1(nos.get(20));
         aresta.setNoMaritmo2(nos.get(6));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1932,8 +1932,8 @@ public class CarregadorDeRotas {
         aresta.setId(23);
         aresta.setNoMaritmo1(nos.get(10));
         aresta.setNoMaritmo2(nos.get(21));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1942,8 +1942,8 @@ public class CarregadorDeRotas {
         aresta.setId(24);
         aresta.setNoMaritmo1(nos.get(21));
         aresta.setNoMaritmo2(nos.get(22));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1952,8 +1952,8 @@ public class CarregadorDeRotas {
         aresta.setId(25);
         aresta.setNoMaritmo1(nos.get(22));
         aresta.setNoMaritmo2(nos.get(23));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1962,8 +1962,8 @@ public class CarregadorDeRotas {
         aresta.setId(26);
         aresta.setNoMaritmo1(nos.get(23));
         aresta.setNoMaritmo2(nos.get(24));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -1973,8 +1973,8 @@ public class CarregadorDeRotas {
         aresta.setId(27);
         aresta.setNoMaritmo1(nos.get(24));
         aresta.setNoMaritmo2(nos.get(25));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2142,8 +2142,8 @@ public class CarregadorDeRotas {
         aresta.setId(1);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(1));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2152,8 +2152,8 @@ public class CarregadorDeRotas {
         aresta.setId(2);
         aresta.setNoMaritmo1(nos.get(1));
         aresta.setNoMaritmo2(nos.get(2));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2162,8 +2162,8 @@ public class CarregadorDeRotas {
         aresta.setId(3);
         aresta.setNoMaritmo1(nos.get(2));
         aresta.setNoMaritmo2(nos.get(3));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2172,8 +2172,8 @@ public class CarregadorDeRotas {
         aresta.setId(4);
         aresta.setNoMaritmo1(nos.get(3));
         aresta.setNoMaritmo2(nos.get(4));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2182,8 +2182,8 @@ public class CarregadorDeRotas {
         aresta.setId(5);
         aresta.setNoMaritmo1(nos.get(4));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2192,8 +2192,8 @@ public class CarregadorDeRotas {
         aresta.setId(6);
         aresta.setNoMaritmo1(nos.get(5));
         aresta.setNoMaritmo2(nos.get(6));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2202,8 +2202,8 @@ public class CarregadorDeRotas {
         aresta.setId(7);
         aresta.setNoMaritmo1(nos.get(6));
         aresta.setNoMaritmo2(nos.get(7));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2212,8 +2212,8 @@ public class CarregadorDeRotas {
         aresta.setId(8);
         aresta.setNoMaritmo1(nos.get(7));
         aresta.setNoMaritmo2(nos.get(8));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2222,8 +2222,8 @@ public class CarregadorDeRotas {
         aresta.setId(9);
         aresta.setNoMaritmo1(nos.get(8));
         aresta.setNoMaritmo2(nos.get(9));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2232,8 +2232,8 @@ public class CarregadorDeRotas {
         aresta.setId(10);
         aresta.setNoMaritmo1(nos.get(9));
         aresta.setNoMaritmo2(nos.get(10));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2242,8 +2242,8 @@ public class CarregadorDeRotas {
         aresta.setId(11);
         aresta.setNoMaritmo1(nos.get(10));
         aresta.setNoMaritmo2(nos.get(11));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2252,8 +2252,8 @@ public class CarregadorDeRotas {
         aresta.setId(12);
         aresta.setNoMaritmo1(nos.get(11));
         aresta.setNoMaritmo2(nos.get(12));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2261,8 +2261,8 @@ public class CarregadorDeRotas {
         aresta.setId(13);
         aresta.setNoMaritmo1(nos.get(12));
         aresta.setNoMaritmo2(nos.get(13));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2271,8 +2271,8 @@ public class CarregadorDeRotas {
         aresta.setId(14);
         aresta.setNoMaritmo1(nos.get(13));
         aresta.setNoMaritmo2(nos.get(14));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2281,8 +2281,8 @@ public class CarregadorDeRotas {
         aresta.setId(15);
         aresta.setNoMaritmo1(nos.get(14));
         aresta.setNoMaritmo2(nos.get(21));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2291,8 +2291,8 @@ public class CarregadorDeRotas {
         aresta.setId(16);
         aresta.setNoMaritmo1(nos.get(0));
         aresta.setNoMaritmo2(nos.get(15));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2301,8 +2301,8 @@ public class CarregadorDeRotas {
         aresta.setId(17);
         aresta.setNoMaritmo1(nos.get(15));
         aresta.setNoMaritmo2(nos.get(16));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2310,8 +2310,8 @@ public class CarregadorDeRotas {
         aresta.setId(18);
         aresta.setNoMaritmo1(nos.get(16));
         aresta.setNoMaritmo2(nos.get(17));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2319,8 +2319,8 @@ public class CarregadorDeRotas {
         aresta.setId(19);
         aresta.setNoMaritmo1(nos.get(17));
         aresta.setNoMaritmo2(nos.get(18));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2329,8 +2329,8 @@ public class CarregadorDeRotas {
         aresta.setId(20);
         aresta.setNoMaritmo1(nos.get(18));
         aresta.setNoMaritmo2(nos.get(19));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2338,8 +2338,8 @@ public class CarregadorDeRotas {
         aresta.setId(21);
         aresta.setNoMaritmo1(nos.get(19));
         aresta.setNoMaritmo2(nos.get(20));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 
@@ -2347,8 +2347,8 @@ public class CarregadorDeRotas {
         aresta.setId(22);
         aresta.setNoMaritmo1(nos.get(20));
         aresta.setNoMaritmo2(nos.get(5));
-        aresta.setCorrente(true);
-        aresta.setVento(true);
+        aresta.setCorrente(false);
+        aresta.setVento(false);
         aresta.setDistancia(50D);
         mArestaList.add(aresta);
 

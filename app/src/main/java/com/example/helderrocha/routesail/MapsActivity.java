@@ -169,7 +169,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         double meter = valueResult % 1000;
         int meterInDec = Integer.valueOf(newFormat.format(meter));
         Log.i("Radius Value", "" + valueResult + "   KM  " + kmInDec
-                + " Meter   " + meterInDec);
+                + " Metros   " + meterInDec);
 
         return Radius * c;
     }
@@ -198,6 +198,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         map.addPolyline(polylineOptions);
 
         for (Aresta aresta : arestas) {
+            aresta.setDistancia(CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
+            Log.i("Aresta "+aresta.getId()+": " , String.valueOf(aresta.getDistancia()));
             if (aresta.getId() != melhorAresta.getId()) {
                 polylineOptions = new PolylineOptions();
                 polylineOptions.color(Color.RED);
@@ -237,23 +239,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return primeira;
     }
 
-
-//    private boolean  getPossibilidades( Aresta mresta) {
-//        //valida se a corrente está a favor e   /valida se o vento esta contra
-//        if (validaCorrente(mresta) && validaVento(mresta)) {
-//                return true;
-//
-//        }//valida se a corrente esta a favor ev alida se o vento esta contra
-//        else if (validaCorrente(mresta) && !validaVento(mresta)) {
-//                //pinta linha
-//                //faz soma
-//                return true;
-//        }
-//        else if(verificaDistancias(mresta)){
-//            //pinta amenor distancia
-//        }
-//        return false;
-//    }
 
     private boolean validaDistanciaTrue(Aresta mresta) {
 //        noMaritmo.getmAresta();
