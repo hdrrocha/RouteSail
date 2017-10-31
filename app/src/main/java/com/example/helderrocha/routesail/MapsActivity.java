@@ -139,11 +139,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             map.animateCamera( CameraUpdateFactory.zoomTo( 11.0f ) );
             map.addMarker(marker);
 
-//            List<Aresta> arestas = new ArrayList<>();
-//            arestas.addAll(getArestas(no));
-//            if (!arestas.isEmpty()) {
-//                pintaMelhorAresta(arestas, no);
-//            }
         }
         buildRoute(nos.get(0));
 
@@ -251,19 +246,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         polylineOptions.add(melhorAresta.getNoMaritmo2().getPosicao());
         map.addPolyline(polylineOptions);
 
-//        for (Aresta aresta : arestas) {
-//
-//            if (aresta.getId() != melhorAresta.getId()) {
-//                polylineOptions = new PolylineOptions();
-//                polylineOptions.color(Color.RED);
-//                polylineOptions.width(5);
-//                polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
-//                polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
-//                map.addPolyline(polylineOptions);
-//            }
-//        }
-
-
     }
 
     private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
@@ -300,7 +282,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 } else {
                     return segunda;
                 }
-            } else if (!validaCorrente(primeira) && !validaVento(primeira) && (!validaCorrente(segunda) || !validaVento(segunda))) {
+            } else if (!validaCorrente(primeira) || !validaVento(primeira) && (validaCorrente(segunda) && validaVento(segunda))) {
+
+                    return segunda;
+
+            } else if (!validaCorrente(primeira) || !validaVento(primeira) && (validaCorrente(segunda) || !validaVento(segunda))) {
                 if (primeira.getDistancia() < segunda.getDistancia()) {
                     return primeira;
                 } else {
@@ -310,19 +296,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         }
         return primeira;
-    }
-
-
-    private boolean validaDistanciaTrue(Aresta mresta) {
-//        noMaritmo.getmAresta();
-//        if(noMaritmo.get)
-            return true;
-    }
-
-    private boolean validaDistanciaFalse(Aresta mresta) {
-//        noMaritmo.getmAresta();
-//        if(noMaritmo.get)
-        return true;
     }
 
 
@@ -362,13 +335,5 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 + " Metros   " + meterInDec);
 
         return Radius * c;
-    }
-
-    public  void  addMelhoresArestas(Aresta aresta){
-        mMelhoresArestas.add(aresta);
-    }
-
-    public  void  addPioresArestas(Aresta aresta){
-        mMelhoresArestas.add(aresta);
     }
 }
