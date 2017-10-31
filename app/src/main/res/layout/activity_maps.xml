@@ -16,5 +16,6 @@
         android:layout_height="wrap_content"
         android:imeOptions="actionDone"
         android:inputType="textCapWords"
+        android:editable="false"
         android:layout_margin="8dp"/>
 </RelativeLayout>

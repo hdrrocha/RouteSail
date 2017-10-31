@@ -108,8 +108,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mRotas.add(CarregadorDeRotas.Rota9());
         mRotas.add(CarregadorDeRotas.Rota10());
 
-
-
     }
 
     @Override
@@ -146,8 +144,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    // => Begin
-
+    // => Begin Arestas
     private void buildRoute(NoMaritmo no) {
         List<Aresta> arestas = new ArrayList<>();
         arestas.addAll(getArestas(no));
@@ -164,7 +161,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         } else {
             finishBuildRoute();
         }
-
     }
 
     private void finishBuildRoute() {
@@ -185,7 +181,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         for (Aresta aresta: mMelhoresArestas) {
 
-
             printAresta(aresta);
 
         }
@@ -195,14 +190,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private Aresta getMelhorAresta(List<Aresta> arestas) {
         Aresta melhorAresta = arestas.get(0);
-        Double distanciaTotal = 0.0;
-
         for (Aresta aresta : arestas) {
             aresta.setDistancia(RSUtil.CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
-            aresta.setmVelocidadeCorrente(RSUtil.radomValue(1,10));
-            Log.i("Aresta "+aresta.getId()+": " , String.valueOf(aresta.getDistancia()));
-            distanciaTotal += aresta.getDistancia();
-            Log.i("Distancia total:", distanciaTotal.toString());
+            aresta.setmVelocidadeCorrente(RSUtil.radomValue(1,10));//TO DO Setar na class
             melhorAresta = getMelhorAresta(melhorAresta, aresta);
         }
 
@@ -227,8 +217,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         map.addPolyline(polylineOptions);
     }
 
-    // => End
-
     private List<Aresta> getArestas(NoMaritmo mNoa) {
         List<Aresta> arestasFilter = new ArrayList<>();
         for (Aresta aresta : mArestaList) {
@@ -239,23 +227,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return arestasFilter;
     }
 
-
-    private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
-        Double distanciaTotal = 0.0;
-        Double vel =  RSUtil.arredondar(caclulaVelocidadeTempo(2.0, velocidadeMediaCorrente(mMelhoresArestas)), 2, 1);
-
-
-        for (Aresta aresta : mMelhoresArestas) {
-                distanciaTotal += aresta.getDistancia();
-        }
-
-        Double tempoEstimado = calculaTempoViagem( RSUtil.arredondar(distanciaTotal, 2, 1), vel);
-
-         Toast.makeText(getApplicationContext(),  "Distancia:"+distanciaTotal,  Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "Velocidade"+ vel,  Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), RSUtil.arredondar(tempoEstimado, 2, 1)+ "horas",  Toast.LENGTH_SHORT).show();
-
+    private boolean validaCorrente( Aresta mresta) {
+        return  mresta.getCorrente() == true;
     }
+
+    private boolean validaVento(Aresta mresta) {
+
+        return  mresta.getVento() == true;
+    }
+
 
     private Aresta getMelhorAresta(Aresta primeira, Aresta segunda) {
         if (validaCorrente(primeira) && validaVento(primeira) && validaCorrente(segunda) && validaVento(segunda)) {
@@ -275,7 +255,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
             } else if (!validaCorrente(primeira) || !validaVento(primeira) && (validaCorrente(segunda) && validaVento(segunda))) {
 
-                    return segunda;
+                return segunda;
 
             } else if (!validaCorrente(primeira) || !validaVento(primeira) && (validaCorrente(segunda) || !validaVento(segunda))) {
                 if (primeira.getDistancia() < segunda.getDistancia()) {
@@ -289,14 +269,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return primeira;
     }
 
+    // => End
 
-    private boolean validaCorrente( Aresta mresta) {
-        return  mresta.getCorrente() == true;
-    }
+    // => Begin Calculos
+    private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
+        Double distanciaTotal = 0.0;
+        Double vel =  RSUtil.arredondar(caclulaVelocidadeTempo(2.0, velocidadeMediaCorrente(mMelhoresArestas)), 2, 1);
 
-    private boolean validaVento(Aresta mresta) {
+        for (Aresta aresta : mMelhoresArestas) {
+            distanciaTotal += aresta.getDistancia();
+        }
 
-        return  mresta.getVento() == true;
+        Double tempoEstimado = calculaTempoViagem( RSUtil.arredondar(distanciaTotal, 2, 1), vel);
+
+        Toast.makeText(getApplicationContext(),  "Distancia:"+distanciaTotal,  Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Velocidade"+ vel,  Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), RSUtil.arredondar(tempoEstimado, 2, 1)+ "horas",  Toast.LENGTH_SHORT).show();
+
     }
 
     private Double caclulaVelocidadeTempo(Double velBarco,Double velCorrente){
@@ -320,6 +309,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //        t = d / v
         return  distancia/velocicidade;
     }
-
+    // => End
 
 }
