@@ -9,6 +9,8 @@ public class Aresta {
     private NoMaritmo mNoMaritmo1;
     private NoMaritmo mNoMaritmo2;
     private Double mDistancia;
+    private Double mVelocidadeCorrente;
+    private Double mVelocidadeVento;
     private boolean mVento;
     private boolean mCorrente;
     private boolean melhorAresta;
@@ -67,5 +69,21 @@ public class Aresta {
 
     public void setMelhorAresta(boolean melhorAresta) {
         this.melhorAresta = melhorAresta;
+    }
+
+    public Double getmVelocidadeCorrente() {
+        return mVelocidadeCorrente;
+    }
+
+    public void setmVelocidadeCorrente(Double mVelocidadeCorrente) {
+        this.mVelocidadeCorrente = mVelocidadeCorrente;
+    }
+
+    public Double getmVelocidadeVento() {
+        return mVelocidadeVento;
+    }
+
+    public void setmVelocidadeVento(Double mVelocidadeVento) {
+        this.mVelocidadeVento = mVelocidadeVento;
     }
 }

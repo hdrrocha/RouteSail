@@ -47,6 +47,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -142,7 +143,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
         buildRoute(nos.get(0));
 
-        caclulaVelocidadeMedia(mMelhoresArestas);
+
     }
 
     // => Begin
@@ -181,18 +182,30 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         for (Aresta aresta: mPioresresArestas) {
             printPiorAresta(aresta);
         }
+
         for (Aresta aresta: mMelhoresArestas) {
+
+
             printAresta(aresta);
+
         }
+        caclulaVelocidadeMedia(mMelhoresArestas);
+
     }
 
     private Aresta getMelhorAresta(List<Aresta> arestas) {
         Aresta melhorAresta = arestas.get(0);
+        Double distanciaTotal = 0.0;
+
         for (Aresta aresta : arestas) {
-            aresta.setDistancia(CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
+            aresta.setDistancia(RSUtil.CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
+            aresta.setmVelocidadeCorrente(RSUtil.radomValue(1,10));
             Log.i("Aresta "+aresta.getId()+": " , String.valueOf(aresta.getDistancia()));
+            distanciaTotal += aresta.getDistancia();
+            Log.i("Distancia total:", distanciaTotal.toString());
             melhorAresta = getMelhorAresta(melhorAresta, aresta);
         }
+
         return melhorAresta;
     }
 
@@ -226,44 +239,22 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return arestasFilter;
     }
 
-    private void pintaMelhorAresta(List<Aresta> arestas, NoMaritmo no) {
-        Aresta melhorAresta = arestas.get(0);
-
-        for (Aresta aresta : arestas) {
-            aresta.setDistancia(CalculationByDistance(aresta.getNoMaritmo1().getPosicao(), aresta.getNoMaritmo2().getPosicao()));
-            Log.i("Aresta "+aresta.getId()+": " , String.valueOf(aresta.getDistancia()));
-            melhorAresta = getMelhorAresta(melhorAresta, aresta);
-            if(melhorAresta.isMelhorAresta()){
-                mMelhoresArestas.add(melhorAresta);
-            }
-
-        }
-
-        PolylineOptions polylineOptions = new PolylineOptions();
-        polylineOptions.color(Color.GREEN);
-        polylineOptions.width(5);
-        polylineOptions.add(melhorAresta.getNoMaritmo1().getPosicao());
-        polylineOptions.add(melhorAresta.getNoMaritmo2().getPosicao());
-        map.addPolyline(polylineOptions);
-
-    }
 
     private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
-        Double distanciaTotal = null;
-        Double distanciaTotalold = null;
+        Double distanciaTotal = 0.0;
+        Double vel =  RSUtil.arredondar(caclulaVelocidadeTempo(2.0, velocidadeMediaCorrente(mMelhoresArestas)), 2, 1);
+
+
         for (Aresta aresta : mMelhoresArestas) {
-            if(distanciaTotal != null){
-                distanciaTotalold =  distanciaTotal;
-            }
-            distanciaTotal =  aresta.getDistancia();
-
-            if(distanciaTotalold != null){
-                distanciaTotal = aresta.getDistancia() + distanciaTotalold;
-            }
-
+                distanciaTotal += aresta.getDistancia();
         }
 
-        Log.i("distanciaTotal", String.valueOf(distanciaTotal));
+        Double tempoEstimado = calculaTempoViagem( RSUtil.arredondar(distanciaTotal, 2, 1), vel);
+
+         Toast.makeText(getApplicationContext(),  "Distancia:"+distanciaTotal,  Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Velocidade"+ vel,  Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), RSUtil.arredondar(tempoEstimado, 2, 1)+ "horas",  Toast.LENGTH_SHORT).show();
+
     }
 
     private Aresta getMelhorAresta(Aresta primeira, Aresta segunda) {
@@ -312,28 +303,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return velCorrente + velBarco;
     }
 
-    public double CalculationByDistance(LatLng StartP, LatLng EndP) {
-        int Radius = 6371;// radius of earth in Km
-        double lat1 = StartP.latitude;
-        double lat2 = EndP.latitude;
-        double lon1 = StartP.longitude;
-        double lon2 = EndP.longitude;
-        double dLat = Math.toRadians(lat2 - lat1);
-        double dLon = Math.toRadians(lon2 - lon1);
-        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
-                + Math.cos(Math.toRadians(lat1))
-                * Math.cos(Math.toRadians(lat2)) * Math.sin(dLon / 2)
-                * Math.sin(dLon / 2);
-        double c = 2 * Math.asin(Math.sqrt(a));
-        double valueResult = Radius * c;
-        double km = valueResult / 1;
-        DecimalFormat newFormat = new DecimalFormat("####");
-        int kmInDec = Integer.valueOf(newFormat.format(km));
-        double meter = valueResult % 1000;
-        int meterInDec = Integer.valueOf(newFormat.format(meter));
-        Log.i("Radius Value", "" + valueResult + "   KM  " + kmInDec
-                + " Metros   " + meterInDec);
+    private Double velocidadeMediaCorrente(List<Aresta> arestas){
+        Double count = 0.0;
+        Double soamCorrentes = 0.0;
+        for (Aresta a : arestas){
+            count++;
+            soamCorrentes += a.getmVelocidadeCorrente();
+        }
 
-        return Radius * c;
+        return  soamCorrentes/count;
+
+
     }
+
+    private Double calculaTempoViagem(Double distancia, Double velocicidade){
+//        t = d / v
+        return  distancia/velocicidade;
+    }
+
+
 }
