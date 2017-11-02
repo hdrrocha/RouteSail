@@ -8,6 +8,8 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -17,6 +19,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -52,14 +56,15 @@ import java.util.Random;
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap map;
-    ArrayList<LatLng> markerPoints;
+    private ArrayList<LatLng> markerPoints;
     private AutoCompleteTextView mEditRotas;
 
     private List<NoMaritmo> nos;
     private List<Aresta> mArestaList;
     private List<Rotas> mRotas;
-    List<Aresta> mMelhoresArestas;
-    List<Aresta> mPioresresArestas;
+    private List<Aresta> mMelhoresArestas;
+    private List<Aresta> mPioresresArestas;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +100,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
 
     private void loadDefaultNos(){

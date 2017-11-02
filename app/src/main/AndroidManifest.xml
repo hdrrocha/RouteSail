@@ -36,16 +36,21 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".SpeedActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:label="@string/title_activity_maps">
+            android:name=".MainActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapsActivity"></activity>
+        <activity
+            android:name=".MapsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SpeedActivity"  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ConfifugeRangeActivity"  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ActivityRoteChoose">  android:theme="@style/AppTheme.NoActionBar"</activity>
     </application>
 
 </manifest>
