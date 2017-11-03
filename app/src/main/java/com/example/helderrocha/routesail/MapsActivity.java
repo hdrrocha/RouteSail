@@ -109,6 +109,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         .setAction("Action", null).show();
             }
         });
+
+
     }
 
     private void loadDefaultNos(){
