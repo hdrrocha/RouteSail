@@ -54,10 +54,11 @@
         <activity
             android:name=".ConfifugeRangeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ActivityRoteChoose">
+        <activity android:name=".ActivityEscolherRota">
             android:theme="@style/AppTheme.NoActionBar"
         </activity>
-        <activity android:name=".DestinoActivity"></activity>
+        <activity android:name=".DestinoActivity"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
     </application>
 
 </manifest>

@@ -4,23 +4,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.helderrocha.routesail.models.Rotas;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class ActivityRoteChoose extends AppCompatActivity {
+public class ActivityEscolherRota extends AppCompatActivity {
     private AutoCompleteTextView mEditRotas;
     private List<Rotas> mRotas = new ArrayList<>();
 
@@ -28,7 +23,7 @@ public class ActivityRoteChoose extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rote_choose);
+        setContentView(R.layout.activity_escolher_rota);
         loadDefaultNos();
         loadComponents();
         loadEventsComponents();

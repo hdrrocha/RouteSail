@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         buttonEscolherRota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), MapsActivity.class);
+                Intent i = new Intent(getApplicationContext(), DestinoActivity.class);
                 i.putExtra("velocidade", "");
                 startActivity(i);
             }
