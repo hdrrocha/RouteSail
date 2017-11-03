@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -214,7 +215,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void printAresta(Aresta aresta) {
         PolylineOptions polylineOptions = new PolylineOptions();
-        polylineOptions.color(Color.GREEN);
+        polylineOptions.color(ContextCompat.getColor(getApplicationContext(), R.color.colorGreenAresta));
         polylineOptions.width(5);
         polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
         polylineOptions.add(aresta.getNoMaritmo2().getPosicao());
@@ -223,7 +224,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void printPiorAresta(Aresta aresta) {
         PolylineOptions polylineOptions = new PolylineOptions();
-        polylineOptions.color(Color.RED);
+        polylineOptions.color(ContextCompat.getColor(getApplicationContext(), R.color.colorAresta));
+        polylineOptions.getEndCap();
         polylineOptions.width(5);
         polylineOptions.add(aresta.getNoMaritmo1().getPosicao());
         polylineOptions.add(aresta.getNoMaritmo2().getPosicao());

@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.helderrocha.routesail.ActivityEscolherRota">
+    tools:context="com.example.helderrocha.routesail.EscolherRotaActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Localize um destino"
+        android:textSize="15dp"
+        android:paddingStart="39dp"
+        android:textColor="@color/colorTitleText"
+        android:fontFamily="@font/circular_std_book"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.21"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="32dp" />
+
     <AutoCompleteTextView
         android:id="@+id/rotas"
         android:background="@android:color/white"
@@ -14,6 +36,17 @@
         android:imeOptions="actionDone"
         android:inputType="textCapWords"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:hint="TEXTO"
+        android:textSize="31dp"
+        android:paddingStart="39dp"
+        android:fontFamily="@font/circular_std_medium"
+        android:textColor="@color/colorTitleTextDark"
+        android:textColorHint="@color/colorTitleTextDark"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="32dp" />
 
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

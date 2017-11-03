@@ -5,6 +5,8 @@
     <color name="colorAccent">#8E4EFA</color>
     <color name="colorMain">#4185f5</color>
     <color name="colorGreenIcon">#1ac7a2</color>
+    <color name="colorGreenAresta">#6ef7bf</color>
+    <color name="colorAresta">#4185f5</color>
     <color name="colorTitleText">#6c7ca1</color>
     <color name="colorTitleTextDark">#172549</color>
 

@@ -15,7 +15,7 @@ import com.example.helderrocha.routesail.models.Rotas;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityEscolherRota extends AppCompatActivity {
+public class EscolherRotaActivity extends AppCompatActivity {
     private AutoCompleteTextView mEditRotas;
     private List<Rotas> mRotas = new ArrayList<>();
 

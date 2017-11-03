@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class ConfifugeRangeActivity extends AppCompatActivity {
-    private EditText editTextRange;
-    private Button buttonMais;
-    private Button buttonMenos;
+    private TextView editTextRange;
+    private ImageButton buttonMais;
+    private ImageButton buttonMenos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,10 @@ public class ConfifugeRangeActivity extends AppCompatActivity {
 
 
     private void loadComponents() {
-         editTextRange = (EditText) findViewById(R.id.editTextRange);
+         editTextRange = (TextView) findViewById(R.id.editTextRange);
         editTextRange.setText(String.valueOf(1));
-         buttonMais = (Button) findViewById(R.id.buttonMais);
-        buttonMenos  = (Button) findViewById(R.id.buttonMais);
+        buttonMais = (ImageButton) findViewById(R.id.buttonMais);
+        buttonMenos  = (ImageButton) findViewById(R.id.buttonMais);
     }
 
     private void loadEventsComponents() {
