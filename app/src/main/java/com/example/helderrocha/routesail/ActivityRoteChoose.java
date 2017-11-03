@@ -1,6 +1,7 @@
 package com.example.helderrocha.routesail;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -50,7 +51,7 @@ public class ActivityRoteChoose extends AppCompatActivity {
 //            i += 1;
 //        }
 //
-//        Collections.addAll(wordList, rotes);
+//        Collections.addAll(wordList, roxtes);
 //        AutoCompleteAdapter adapter = new AutoCompleteAdapter(this,android.R.layout.simple_dropdown_item_1line,android.R.id.text1,wordList);
         ArrayAdapter<Rotas> adapterRotas = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line,android.R.id.text1, mRotas);
         return adapterRotas;
@@ -78,7 +79,12 @@ public class ActivityRoteChoose extends AppCompatActivity {
                 InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 in.hideSoftInputFromWindow(mEditRotas.getApplicationWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
-                Toast.makeText(getApplicationContext(),  "Selecionado",  Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),  "Selecionado",  Toast.LENGTH_SHORT).show();
+
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result",                mRotas.get(i).getDescricao());
+                setResult(MainActivity.RESULT_OK,returnIntent);
+                finish();
             }
         });
 

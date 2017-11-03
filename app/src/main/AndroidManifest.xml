@@ -48,9 +48,16 @@
         <activity
             android:name=".MapsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SpeedActivity"  android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".ConfifugeRangeActivity"  android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".ActivityRoteChoose">  android:theme="@style/AppTheme.NoActionBar"</activity>
+        <activity
+            android:name=".SpeedActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ConfifugeRangeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityRoteChoose">
+            android:theme="@style/AppTheme.NoActionBar"
+        </activity>
+        <activity android:name=".DestinoActivity"></activity>
     </application>
 
 </manifest>
