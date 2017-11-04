@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.helderrocha.routesail.models.Aresta;
@@ -19,7 +20,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -46,10 +49,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_maps);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
-
-
     }
 
 
@@ -77,6 +76,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(final GoogleMap googleMap) {
+
+
         map = googleMap;
         markerPoints = new ArrayList<LatLng>();
         LatLng santaCatarina = new LatLng(-27.588462, -48.336853);
@@ -262,14 +263,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
         Double distanciaTotal = 0.0;
         Double vel =  RSUtil.arredondar(caclulaVelocidadeTempo(velocidade, velocidadeMediaCorrente(mMelhoresArestas)), 2, 1);
-
         for (Aresta aresta : mMelhoresArestas) {
             distanciaTotal += aresta.getDistancia();
         }
-
         Double tEstimado = calculaTempoViagem( RSUtil.arredondar(distanciaTotal, 2, 1), vel);
-
-        tempoEstimado.setText(tEstimado.toString());
+        tempoEstimado.setText(Mask.convertHoras(tEstimado));
     }
 
     private Double caclulaVelocidadeTempo(Double velBarco,Double velCorrente){
@@ -283,10 +281,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             count++;
             soamCorrentes += a.getmVelocidadeCorrente();
         }
-
         return  soamCorrentes/count;
-
-
     }
 
     private Double calculaTempoViagem(Double distancia, Double velocicidade){
