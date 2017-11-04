@@ -6,8 +6,8 @@ package com.example.helderrocha.routesail.models;
 
 public class Aresta {
     private int mId;
-    private NoMaritmo mNoMaritmo1;
-    private NoMaritmo mNoMaritmo2;
+    private Vertices mVertices1;
+    private Vertices mVertices2;
     private Double mDistancia;
     private Double mVelocidadeCorrente;
     private Double mVelocidadeVento;
@@ -23,20 +23,20 @@ public class Aresta {
         this.mId = mId;
     }
 
-    public NoMaritmo getNoMaritmo1() {
-        return mNoMaritmo1;
+    public Vertices getNoMaritmo1() {
+        return mVertices1;
     }
 
-    public void setNoMaritmo1(NoMaritmo mNoMaritmo1) {
-        this.mNoMaritmo1 = mNoMaritmo1;
+    public void setNoMaritmo1(Vertices mVertices1) {
+        this.mVertices1 = mVertices1;
     }
 
-    public NoMaritmo getNoMaritmo2() {
-        return mNoMaritmo2;
+    public Vertices getNoMaritmo2() {
+        return mVertices2;
     }
 
-    public void setNoMaritmo2(NoMaritmo mNoMaritmo2) {
-        this.mNoMaritmo2 = mNoMaritmo2;
+    public void setNoMaritmo2(Vertices mVertices2) {
+        this.mVertices2 = mVertices2;
     }
 
     public Double getDistancia() {

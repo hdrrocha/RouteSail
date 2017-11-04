@@ -17,26 +17,34 @@
         tools:layout_editor_absoluteX="0dp" />
     <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="56dp"
         android:orientation="horizontal"
         android:background="#ffff">
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
             android:scaleType="centerInside"
             android:src="@drawable/ic_burge" />
         <TextView
             android:id="@+id/rotaSelecionada"
-            android:layout_width="40dp"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/circular_std_medium"
             android:text="Porto Belo - Praiado Cachadaço"
             android:textColor="@color/colorTitleTextDark"
+            android:layout_gravity="center_vertical"
             android:textSize="19dp" />
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorTitleText"></LinearLayout>
         <LinearLayout
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
             android:orientation="vertical">
             <LinearLayout
             android:layout_width="match_parent"
@@ -45,6 +53,7 @@
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:tint="@color/colorTitleTextDark"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_av_timer"/>
                 <TextView
                     android:id="@+id/velocidadeMedia"
@@ -52,6 +61,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/circular_std_medium"
                     android:textSize="15dp"
+                    android:layout_gravity="center_vertical"
                     android:textColor="@color/colorTitleTextDark"
                     android:text="10km"/>
 
@@ -64,22 +74,20 @@
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:tint="@color/colorTitleTextDark"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_access_time"/>
                 <TextView
                     android:id="@+id/tempoEstimado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/circular_std_medium"
+                    android:layout_gravity="center_vertical"
                     android:textSize="15dp"
                     android:textColor="@color/colorTitleTextDark"
                     android:text="10km"/>
             </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

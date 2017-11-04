@@ -8,7 +8,7 @@ import java.util.List;
  * Created by helderrocha on 04/10/17.
  */
 
-public class NoMaritmo {
+public class Vertices {
     private Integer mId;
     private LatLng mPosicao;
     private String mLocal;

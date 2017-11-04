@@ -1,34 +1,14 @@
 package com.example.helderrocha.routesail;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.example.helderrocha.routesail.models.Aresta;
-import com.example.helderrocha.routesail.models.NoMaritmo;
+import com.example.helderrocha.routesail.models.Vertices;
 import com.example.helderrocha.routesail.models.Rotas;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -36,32 +16,18 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.maps.android.SphericalUtil;
 
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Random;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap map;
     private ArrayList<LatLng> markerPoints;
 
-    private List<NoMaritmo> nos;
+    private List<Vertices> nos;
     private List<Aresta> mArestaList;
     private List<Rotas> mRotas = new ArrayList<>();
     private List<Aresta> mMelhoresArestas;
@@ -145,7 +111,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMelhoresArestas =  new ArrayList<>();
         map.clear();
 
-        for (NoMaritmo no : nos) {
+        for (Vertices no : nos) {
 
             MarkerOptions marker = new MarkerOptions().position(no.getPosicao()).title(String.valueOf(no.getId()-1));
 
@@ -165,14 +131,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     // => Begin Arestas
-    private void buildRoute(NoMaritmo no) {
+    private void buildRoute(Vertices no) {
         List<Aresta> arestas = new ArrayList<>();
         arestas.addAll(getArestas(no));
         Aresta melhorAresta = new Aresta();
         if (!arestas.isEmpty()) {
             melhorAresta = getMelhorAresta(arestas);
             mMelhoresArestas.add(melhorAresta);
-            NoMaritmo proximoNo = melhorAresta.getNoMaritmo2();
+            Vertices proximoNo = melhorAresta.getNoMaritmo2();
             if (proximoNo != null) {
                 buildRoute(proximoNo);
             } else {
@@ -238,7 +204,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         map.addPolyline(polylineOptions);
     }
 
-    private List<Aresta> getArestas(NoMaritmo mNoa) {
+    private List<Aresta> getArestas(Vertices mNoa) {
         List<Aresta> arestasFilter = new ArrayList<>();
         for (Aresta aresta : mArestaList) {
             if(aresta.getNoMaritmo1().getId() == mNoa.getId()){
