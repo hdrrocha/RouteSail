@@ -2,6 +2,7 @@ package com.example.helderrocha.routesail;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.AutoCompleteTextView;
 
 import com.example.helderrocha.routesail.models.Rotas;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,15 +71,13 @@ public class EscolherRotaActivity extends AppCompatActivity {
         mEditRotas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //TO DO
                 mRotas.get(i).getNosMaritmos();
                 InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 in.hideSoftInputFromWindow(mEditRotas.getApplicationWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-
-//                Toast.makeText(getApplicationContext(),  "Selecionado",  Toast.LENGTH_SHORT).show();
-
                 Intent returnIntent = new Intent();
-                returnIntent.putExtra("result",                mRotas.get(i).getDescricao());
+                returnIntent.putExtra("RotaSelecionadaDescricao",  mRotas.get(i).getDescricao());
+                mRotas.get(i).getId().toString();
+                returnIntent.putExtra("RotaSelecionadaId",  mRotas.get(i).getId().toString());
                 setResult(MainActivity.RESULT_OK,returnIntent);
                 finish();
             }

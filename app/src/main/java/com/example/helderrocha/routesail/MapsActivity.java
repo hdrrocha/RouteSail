@@ -21,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,6 +47,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DecimalFormat;
@@ -58,59 +60,37 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private GoogleMap map;
     private ArrayList<LatLng> markerPoints;
-    private AutoCompleteTextView mEditRotas;
 
     private List<NoMaritmo> nos;
     private List<Aresta> mArestaList;
-    private List<Rotas> mRotas;
+    private List<Rotas> mRotas = new ArrayList<>();
     private List<Aresta> mMelhoresArestas;
     private List<Aresta> mPioresresArestas;
 
+    private int rotaId = 0;
+    private Double velocidade = 0.0;
+
+    private TextView rotaSelecionada;
+    private TextView tempoEstimado;
+    private TextView velocidadeMedia;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mEditRotas = findViewById(R.id.rotas);
-        mRotas = new ArrayList<>();
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        ArrayAdapter<Rotas> adapterRotas = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, mRotas);
-        mEditRotas.setAdapter(adapterRotas);
-
-        mEditRotas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                nos = mRotas.get(i).getNosMaritmos();
-                mArestaList = mRotas.get(i).getArestas();
-
-                InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                in.hideSoftInputFromWindow(mEditRotas.getApplicationWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
 
-                carregarGrafo();
-            }
-        });
 
-        mEditRotas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View arg0) {
-                mEditRotas.showDropDown();
-            }
-        });
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    }
 
 
+    private void loadComponents() {
+        rotaSelecionada = (TextView) findViewById(R.id.rotaSelecionada);
+        tempoEstimado = (TextView) findViewById(R.id.tempoEstimado);
+        velocidadeMedia = (TextView) findViewById(R.id.velocidadeMedia);
     }
 
     private void loadDefaultNos(){
@@ -126,6 +106,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    private void loadComponetsEvents() {
+    }
+
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         map = googleMap;
@@ -134,6 +117,27 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(santaCatarina));
         googleMap.animateCamera( CameraUpdateFactory.zoomTo( 8.0f ) );
         loadDefaultNos();
+
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            rotaId = Integer.parseInt(extras.getString("RotaSelecionadaId"));
+            velocidade = Double.valueOf(extras.getString("velocidade"));
+        }
+
+        loadComponents();
+        loadComponetsEvents();
+
+        if(rotaId != 0){
+            nos = mRotas.get(rotaId).getNosMaritmos();
+            mArestaList = mRotas.get(rotaId).getArestas();
+
+
+            velocidadeMedia.setText(velocidade.toString());
+            rotaSelecionada.setText(mRotas.get(rotaId).getDescricao());
+
+            carregarGrafo();
+        }
     }
 
     private void carregarGrafo() {
@@ -291,18 +295,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     // => Begin Calculos
     private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
         Double distanciaTotal = 0.0;
-        Double vel =  RSUtil.arredondar(caclulaVelocidadeTempo(2.0, velocidadeMediaCorrente(mMelhoresArestas)), 2, 1);
+        Double vel =  RSUtil.arredondar(caclulaVelocidadeTempo(velocidade, velocidadeMediaCorrente(mMelhoresArestas)), 2, 1);
 
         for (Aresta aresta : mMelhoresArestas) {
             distanciaTotal += aresta.getDistancia();
         }
 
-        Double tempoEstimado = calculaTempoViagem( RSUtil.arredondar(distanciaTotal, 2, 1), vel);
+        Double tEstimado = calculaTempoViagem( RSUtil.arredondar(distanciaTotal, 2, 1), vel);
 
-        Toast.makeText(getApplicationContext(),  "Distancia:"+distanciaTotal,  Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "Velocidade"+ vel,  Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), RSUtil.arredondar(tempoEstimado, 2, 1)+ "horas",  Toast.LENGTH_SHORT).show();
-
+        tempoEstimado.setText(tEstimado.toString());
     }
 
     private Double caclulaVelocidadeTempo(Double velBarco,Double velCorrente){

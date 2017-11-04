@@ -20,26 +20,13 @@
     android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="#ffff">
-
-        <AutoCompleteTextView
-        android:id="@+id/rotas"
-        android:background="@android:color/white"
-        android:padding="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:imeOptions="actionDone"
-        android:inputType="textCapWords"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="gone"/>
-
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:scaleType="centerInside"
             android:src="@drawable/ic_burge" />
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/rotaSelecionada"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -54,19 +41,22 @@
             <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:tint="@color/colorTitleTextDark"
-                android:src="@drawable/ic_av_timer"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/circular_std_medium"
-                android:textSize="15dp"
-                android:textColor="@color/colorTitleTextDark"
-                android:text="10km"/>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:tint="@color/colorTitleTextDark"
+                    android:src="@drawable/ic_av_timer"/>
+                <TextView
+                    android:id="@+id/velocidadeMedia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/circular_std_medium"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorTitleTextDark"
+                    android:text="10km"/>
+
         </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -74,8 +64,9 @@
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:tint="@color/colorTitleTextDark"
-                    android:src="@drawable/ic_av_timer"/>
+                    android:src="@drawable/ic_access_time"/>
                 <TextView
+                    android:id="@+id/tempoEstimado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/circular_std_medium"
