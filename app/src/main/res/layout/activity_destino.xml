@@ -44,7 +44,7 @@
         android:layout_width="99dp"
         android:background="@drawable/button_background_retangular"
         android:layout_height="40dp"
-        android:text="10km"
+        android:text="5km"
         android:fontFamily="@font/circular_std_book"
         android:textColor="@color/colorTitleText"
         android:layout_marginTop="15dp"

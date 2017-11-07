@@ -59,6 +59,12 @@ public class DestinoActivity extends AppCompatActivity {
                     intent.putExtra("RotaSelecionadaId", rotaId);
                     intent.putExtra("velocidade", range.toString());
 
+                }else if(range == null && rotaId != null){
+                    intent.putExtra("RotaSelecionadaId", rotaId);
+                    intent.putExtra("velocidade",  "5");
+                }else{
+                    intent.putExtra("RotaSelecionadaId", "1");
+                    intent.putExtra("velocidade",  "5");
                 }
                 startActivity(intent);
 
@@ -79,7 +85,7 @@ public class DestinoActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK_VELOCIDADE)
         {
             range = intent.getStringExtra("RangeSelecionadaId");
-            buttonRange.setText(range);
+            buttonRange.setText(range+"Km");
         }
         }
 

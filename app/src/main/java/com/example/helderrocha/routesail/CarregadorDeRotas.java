@@ -254,7 +254,7 @@ public class CarregadorDeRotas {
 //        Jurere internacional/Ponta das canas
         Rotas rotas = new Rotas();
         rotas.setId(1);
-        rotas.setDescricao("CERTA1");
+        rotas.setDescricao("Jurere internacional-Ponta das canas");
         rotas.setArestas(mArestaList);
         rotas.setVertices(nos);
 
@@ -525,7 +525,7 @@ public class CarregadorDeRotas {
 //        Pier de Porto Belo Oceano Atlântico Sul/Praia do Caixa D'Açp
         Rotas rotas = new Rotas();
         rotas.setId(3);
-        rotas.setDescricao("CERTA 2");
+        rotas.setDescricao("Porto Belo-Praia do Caixa D'aço");
         rotas.setArestas(mArestaList);
         rotas.setVertices(nos);
 
@@ -883,7 +883,7 @@ public class CarregadorDeRotas {
 //        Praia dos Açores Enseada do Pântano do Sul/Praia da Ponta do papagaio
         Rotas rotas = new Rotas();
         rotas.setId(3);
-        rotas.setDescricao("CERTO 3");
+        rotas.setDescricao("Açores Enseada do Pântano do Sul-Ponta do papagaio");
         rotas.setArestas(mArestaList);
         rotas.setVertices(nos);
 
@@ -1064,7 +1064,7 @@ public class CarregadorDeRotas {
 
         Rotas rotas = new Rotas();
         rotas.setId(5);
-        rotas.setDescricao("CERTA 5");
+        rotas.setDescricao("Jurere internacional-Ponta das canas");
         rotas.setArestas(mArestaList);
         rotas.setVertices(nos);
 
@@ -1078,7 +1078,7 @@ public class CarregadorDeRotas {
         Vertices vertices = new Vertices();
         vertices.setId(1);
         vertices.setmIcon(R.drawable.ic_boat);
-        vertices.setmLocal("Saida Garopaba: Santa Catarina");
+        vertices.setmLocal("Garopaba: Santa Catarina");
         vertices.setPosicao(new LatLng(-28.029592, -48.599380));
         nos.add(vertices);
 
@@ -1188,7 +1188,7 @@ public class CarregadorDeRotas {
         vertices = new Vertices();
         vertices.setId(17);
         vertices.setmIcon(R.drawable.ic_flag);
-        vertices.setmLocal("ic_flag Ilha de Santa Catarina");
+        vertices.setmLocal("Ilha de Santa Catarina");
         vertices.setPosicao(new LatLng(-27.764967, -48.484087));
         nos.add(vertices);
 
@@ -1382,7 +1382,7 @@ public class CarregadorDeRotas {
 
         Rotas rotas = new Rotas();
         rotas.setId(6);
-        rotas.setDescricao("CERTA 4");
+        rotas.setDescricao("Garopaba-Florianópolis");
         rotas.setArestas(mArestaList);
         rotas.setVertices(nos);
 
@@ -1519,7 +1519,7 @@ public class CarregadorDeRotas {
         vertices = new Vertices();
         vertices.setId(20);
         vertices.setmIcon(R.drawable.ic_flag);
-        vertices.setmLocal("ic_flag ao sul da Ilha do Campeche Oceano Atlântico Sul");
+        vertices.setmLocal("Sul da Ilha do Campeche Oceano Atlântico Sul");
         vertices.setPosicao(new LatLng(-27.704412, -48.465728));
         nos.add(vertices);
 
@@ -1528,7 +1528,7 @@ public class CarregadorDeRotas {
 //        Saida Joaquina Oceano Atlântico Su /ic_flag ao sul da Ilha do Campeche Oceano Atlântico Sul
         Rotas rotas = new Rotas();
         rotas.setId(7);
-        rotas.setDescricao("CERTA 6");
+        rotas.setDescricao("Joaquina-Ilha do Campeche");
         rotas.setArestas(mArestaList);
         rotas.setVertices(nos);
 
@@ -1541,7 +1541,7 @@ public class CarregadorDeRotas {
         Vertices vertices = new Vertices();
         vertices.setId(1);
         vertices.setmIcon(R.drawable.ic_boat);
-        vertices.setmLocal("Saida laguna Oceano Atlântico Sul");
+        vertices.setmLocal("Saida Laguna Oceano Atlântico Sul");
         vertices.setPosicao(new LatLng(-28.488745, -48.761960));
         nos.add(vertices);
 
@@ -1705,7 +1705,7 @@ public class CarregadorDeRotas {
         vertices = new Vertices();
         vertices.setId(26);
         vertices.setmIcon(R.drawable.ic_flag);
-        vertices.setmLocal("ic_flag Imbituba:Oceano Atlântico Sul");
+        vertices.setmLocal("Imbituba:Oceano Atlântico Sul");
         vertices.setPosicao(new LatLng(-28.244156, -48.660440));
         nos.add(vertices);
 
@@ -1978,7 +1978,7 @@ public class CarregadorDeRotas {
 
         Rotas rotas = new Rotas();
         rotas.setId(9);
-        rotas.setDescricao("CERTA 7");
+        rotas.setDescricao("Laguna-Imbituba");
         rotas.setArestas(mArestaList);
         rotas.setVertices(nos);
 

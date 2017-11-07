@@ -1,12 +1,16 @@
 package com.example.helderrocha.routesail;
 
+import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.helderrocha.routesail.models.Aresta;
 import com.example.helderrocha.routesail.models.Vertices;
@@ -17,6 +21,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
@@ -37,6 +42,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private int rotaId = 0;
     private Double velocidade = 0.0;
+    private  Double velocidadeBarcoAgua = 0.0;
 
     private TextView rotaSelecionada;
     private TextView tempoEstimado;
@@ -48,6 +54,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_maps);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 
@@ -71,6 +78,36 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void loadComponetsEvents() {
+        tempoEstimado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                exemplo_simples();
+            }
+        });
+    }
+    private void exemplo_simples() {
+        //Cria o gerador do AlertDialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //define o titulo
+//        builder.setTitle("Titulo");
+        //define a mensagem
+        builder.setMessage("Velocidade informada em  KM: " + tempoEstimado.getText() +"\n média de velocidade a ser atingida na rota"+ velocidadeBarcoAgua.toString());
+        //define um botão como positivo
+        builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(MapsActivity.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
+            }
+        });
+        //define um botão como negativo.
+        builder.setNegativeButton("Negativo", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(MapsActivity.this, "negativo=" + arg1, Toast.LENGTH_SHORT).show();
+            }
+        });
+        //cria o AlertDialog
+        AlertDialog alerta = builder.create();
+        //Exibe
+        alerta.show();
     }
 
     @Override
@@ -82,6 +119,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         LatLng santaCatarina = new LatLng(-27.588462, -48.336853);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(santaCatarina));
         googleMap.animateCamera( CameraUpdateFactory.zoomTo( 8.0f ) );
+        googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(getApplicationContext(), R.raw.styles_json));
         loadDefaultNos();
 
 
@@ -261,7 +299,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     // => Begin Calculos
     private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
         Double distanciaTotal = 0.0;
-        Double velocidadeBarcoAgua =  caclulaVelocidadeBarcoAgua(doTest(velocidade), doTest(velocidadeMediaCorrente(mMelhoresArestas)));
+         velocidadeBarcoAgua =  caclulaVelocidadeBarcoAgua(doTest(velocidade), doTest(velocidadeMediaCorrente(mMelhoresArestas)));
         for (Aresta aresta : mMelhoresArestas) {
             distanciaTotal += aresta.getDistancia();
         }
