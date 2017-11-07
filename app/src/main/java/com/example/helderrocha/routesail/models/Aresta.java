@@ -23,19 +23,19 @@ public class Aresta {
         this.mId = mId;
     }
 
-    public Vertices getNoMaritmo1() {
+    public Vertices getVertice1() {
         return mVertices1;
     }
 
-    public void setNoMaritmo1(Vertices mVertices1) {
+    public void setVertice1(Vertices mVertices1) {
         this.mVertices1 = mVertices1;
     }
 
-    public Vertices getNoMaritmo2() {
+    public Vertices getVertice2() {
         return mVertices2;
     }
 
-    public void setNoMaritmo2(Vertices mVertices2) {
+    public void setVertice2(Vertices mVertices2) {
         this.mVertices2 = mVertices2;
     }
 

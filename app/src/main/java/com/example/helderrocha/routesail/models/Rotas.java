@@ -9,7 +9,7 @@ import java.util.List;
 public class Rotas {
     private Integer mId;
     private String mDescricao;
-    private List<Vertices> mNosMaritmos;
+    private List<Vertices> mVertices;
     private List<Aresta> mArestas;
 
     public Integer getId() {
@@ -28,12 +28,12 @@ public class Rotas {
         this.mDescricao = mDescricao;
     }
 
-    public List<Vertices> getNosMaritmos() {
-        return mNosMaritmos;
+    public List<Vertices> getVertices() {
+        return mVertices;
     }
 
-    public void setNosMaritmos(List<Vertices> mNosMaritmos) {
-        this.mNosMaritmos = mNosMaritmos;
+    public void setVertices(List<Vertices> mVertices) {
+        this.mVertices = mVertices;
     }
 
     public List<Aresta> getArestas() {

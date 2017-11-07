@@ -51,7 +51,7 @@ public final class RSUtil {
         int meterInDec = Integer.valueOf(newFormat.format(meter));
         Log.i("Radius Value", "" + valueResult + "   KM  " + kmInDec
                 + " Metros   " + meterInDec);
-
+        Log.i( "KM", String.valueOf(kmInDec));
         return Radius * c;
     }
 }
