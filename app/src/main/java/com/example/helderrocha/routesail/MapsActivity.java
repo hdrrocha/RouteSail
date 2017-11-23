@@ -208,7 +208,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             printAresta(aresta);
 
         }
-        caclulaVelocidadeMedia(mMelhoresArestas);
+        calculaVelocidadeMedia(mMelhoresArestas);
 
     }
 
@@ -297,7 +297,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     // => End
 
     // => Begin Calculos
-    private void caclulaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
+    private void calculaVelocidadeMedia(List<Aresta> mMelhoresArestas) {
         Double distanciaTotal = 0.0;
          velocidadeBarcoAgua =  caclulaVelocidadeBarcoAgua(doTest(velocidade), doTest(velocidadeMediaCorrente(mMelhoresArestas)));
         for (Aresta aresta : mMelhoresArestas) {
@@ -317,12 +317,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private Double velocidadeMediaCorrente(List<Aresta> arestas){
         Double count = 0.0;
-        Double soamCorrentes = 0.0;
+        Double somaCorrentes = 0.0;
         for (Aresta a : arestas){
             count++;
-            soamCorrentes += a.getmVelocidadeCorrente();
+            somaCorrentes += a.getmVelocidadeCorrente();
         }
-        return  soamCorrentes/count;
+        return  somaCorrentes/count;
     }
 
     private Double calculaTempoViagem(Double distancia, Double velocicidade){
