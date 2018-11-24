@@ -8,4 +8,5 @@
     <string name="user_name">Usuário</string>
     <string name="boat_name">Nome do Barco</string>
     <string name="velocity_boat">Velocidade do barco</string>
+    <string name="password_confirm">Confirmar Senha</string>
 </resources>
