@@ -26,11 +26,12 @@ public class UserRest {
             .create(Api.class);
 String suce;
     public void createUsers(String userBody) {
+        Log.i("SUCESSAGEM FINOTII", userBody);
         api.createUsers(Api.API_KEY, userBody)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
-                    Log.i("SUCESSAGEM", response.getLoginEmail());
+                    Log.i("SUCESSAGEM", response.loginEmail);
                 });
     }
 }

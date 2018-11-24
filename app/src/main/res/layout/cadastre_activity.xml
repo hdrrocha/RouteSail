@@ -84,6 +84,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:hint="@string/user_name"
+        android:text="mais_louci_em_sm@gmail.com"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +102,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:text="!Q2w3e4r"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -117,6 +119,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:text="!Q2w3e4r"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />

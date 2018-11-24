@@ -7,118 +7,118 @@ import com.squareup.moshi.Json;
 public class LoggedInUser {
     
     @Json( name = "id")
-    private String id;
+    public String id;
     
     @Json( name = "loginEmail")
-    private String loginEmail;
+    public String loginEmail;
     
     @Json( name = "firstName")
-    private String firstName;
+    public String firstName;
     
     @Json( name = "lastName")
-    private String lastName;
+    public String lastName;
     
     @Json( name = "displayName")
-    private String displayName;
+    public String displayName;
     
     @Json( name = "nickName")
-    private String nickName;
+    public String nickName;
     
     @Json( name = "title")
-    private String title;
+    public String title;
     
     @Json( name = "jobTitle")
-    private String jobTitle;
+    public String jobTitle;
     
     @Json( name = "emails")
-    private List<Email> emails = null;
+    public List<Email> emails = null;
     
     @Json( name = "phoneNumbers")
-    private List<PhoneNumber> phoneNumbers = null;
+    public List<PhoneNumber> phoneNumbers = null;
     
     @Json( name = "country")
-    private String country;
+    public String country;
     
     @Json( name = "language")
-    private String language;
+    public String language;
     
     @Json( name = "timezone")
-    private String timezone;
+    public String timezone;
     
     @Json( name = "jid_im")
-    private String jidIm;
+    public String jidIm;
     
     @Json( name = "jid_tel")
-    private String jidTel;
+    public String jidTel;
     
     @Json( name = "jid_password")
-    private String jidPassword;
+    public String jidPassword;
     
     @Json( name = "roles")
-    private List<String> roles = null;
+    public List<String> roles = null;
     
     @Json( name = "adminType")
-    private String adminType;
+    public String adminType;
     
     @Json( name = "companyId")
-    private String companyId;
+    public String companyId;
     
     @Json( name = "companyName")
-    private String companyName;
+    public String companyName;
     
     @Json( name = "isInDefaultCompany")
-    private boolean isInDefaultCompany;
+    public boolean isInDefaultCompany;
     
     @Json( name = "organisationId")
-    private Object organisationId;
+    public Object organisationId;
     
     @Json( name = "siteId")
-    private Object siteId;
+    public Object siteId;
     
     @Json( name = "isActive")
-    private boolean isActive;
+    public boolean isActive;
     
     @Json( name = "isInitialized")
-    private boolean isInitialized;
+    public boolean isInitialized;
     
     @Json( name = "initializationDate")
-    private String initializationDate;
+    public String initializationDate;
     
     @Json( name = "activationDate")
-    private String activationDate;
+    public String activationDate;
     
     @Json( name = "creationDate")
-    private String creationDate;
+    public String creationDate;
     
     @Json( name = "lastUpdateDate")
-    private String lastUpdateDate;
+    public String lastUpdateDate;
     
     @Json( name = "lastAvatarUpdateDate")
-    private String lastAvatarUpdateDate;
+    public String lastAvatarUpdateDate;
     
     @Json( name = "createdBySelfRegister")
-    private boolean createdBySelfRegister;
+    public boolean createdBySelfRegister;
     @Json( name = "createdByAdmin")
   
-    private CreatedByAdmin createdByAdmin;
+    public CreatedByAdmin createdByAdmin;
     @Json( name = "invitedBy")
   
-    private InvitedBy invitedBy;
+    public InvitedBy invitedBy;
     @Json( name = "firstLoginDate")
   
-    private String firstLoginDate;
+    public String firstLoginDate;
     @Json( name = "lastLoginDate")
   
-    private String lastLoginDate;
+    public String lastLoginDate;
     @Json( name = "loggedSince")
   
-    private String loggedSince;
+    public String loggedSince;
     @Json( name = "isTerminated")
   
-    private boolean isTerminated;
+    public boolean isTerminated;
     @Json( name = "guestMode")
   
-    private boolean guestMode;
+    public boolean guestMode;
 
     public String getId() {
         return id;
@@ -128,7 +128,7 @@ public class LoggedInUser {
         this.id = id;
     }
 
-    @Json( name = "loginEmail")
+//    @Json( name = "loginEmail")
     public String getLoginEmail() {
         return loginEmail;
     }
