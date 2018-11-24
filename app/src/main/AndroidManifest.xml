@@ -54,11 +54,14 @@
         <activity
             android:name=".ConfifugeRangeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EscolherRotaActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity android:name=".DestinoActivity"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".EscolherRotaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DestinoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".UserActivity"></activity>
     </application>
 
 </manifest>

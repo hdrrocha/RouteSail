@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">BoatRout</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">BoatRoute</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="register">Cadastrar</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="user_name">Usuário</string>
+    <string name="boat_name">Nome do Barco</string>
+    <string name="velocity_boat">Velocidade do barco</string>
 </resources>
