@@ -1,9 +1,16 @@
 package com.example.helderrocha.routesail;
 
+import android.content.Context;
 import android.content.DialogInterface;
+
+import android.graphics.Color;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -44,18 +51,58 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Double velocidade = 0.0;
     private  Double velocidadeBarcoAgua = 0.0;
 
+    public double latitude;
+    public double longitude;
+    public LocationManager locationManager;
+    
+
     private TextView rotaSelecionada;
     private TextView tempoEstimado;
     private TextView velocidadeMedia;
+    private FloatingActionButton fab;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+         fab = (FloatingActionButton) findViewById(R.id.fabAlert);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        final Location[] lastLocation = new Location[1];
+        final LocationManager[] mlocManager = {null};
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(mapFragment.getActivity());
+                builder.setMessage("Deseja pedir ajuda?")
+                        .setPositiveButton("Enviar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                Context context = getApplicationContext();
+                                CharSequence text = "Sua solicitação foi enviada para o corpo de bombeiros, aguardo por socorro!";
+                                int duration = 30;
+                                dialog.dismiss();
+                                Toast toast = Toast.makeText(context, text, duration);
+                                toast.show();
+
+                            }
+                        })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
     }
+
 
 
     private void loadComponents() {

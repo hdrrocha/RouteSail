@@ -20,12 +20,12 @@
     android:layout_height="56dp"
         android:orientation="horizontal"
         android:background="#ffff">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_burge" />
+        <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/ic_burge" />-->
         <TextView
             android:id="@+id/rotaSelecionada"
             android:layout_width="30dp"
@@ -35,6 +35,7 @@
             android:text="Porto Belo - Praiado Cachadaço"
             android:textColor="@color/colorTitleTextDark"
             android:layout_gravity="center_vertical"
+            android:padding="2dp"
             android:textSize="19dp" />
         <LinearLayout
             android:layout_width="2dp"
@@ -90,16 +91,16 @@
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabAlert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        app:srcCompat="@drawable/ic_search_white"
+        app:srcCompat="@drawable/alert_icon"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/rotas"
         android:layout_alignEnd="@+id/rotas"
-        android:tint="#1ac7a2"
-        android:backgroundTint="#fff"
+        android:tint="#fff"
+        android:backgroundTint="#ff6666"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="16dp"/>

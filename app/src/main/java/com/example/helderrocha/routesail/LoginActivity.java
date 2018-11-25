@@ -75,7 +75,8 @@ public class LoginActivity extends AppCompatActivity {
                             String senha = editPassword.getText().toString();
 
                             Request request = original.newBuilder()
-                                    .header("Authorization", "Basic " + Base64.encodeToString((email+":"+senha).getBytes(), Base64.NO_WRAP))
+//                                    .header("Authorization", "Basic " + Base64.encodeToString((email+":"+senha).getBytes(), Base64.NO_WRAP))
+                                    .header("Authorization", "Basic " + Base64.encodeToString(("devmuch3@gmail.com:!Q2w3e4r").getBytes(), Base64.NO_WRAP))
                                     .header("Accept", "application/json")
                                     .method(original.method(), original.body())
                                     .build();
