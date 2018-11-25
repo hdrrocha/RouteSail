@@ -8,30 +8,26 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.moshi.MoshiConverterFactory;
 
 
 public class UserRest {
 
 //    private final DetailsScreenPresenter mDetailsScreenPresenter;
-
-    private final Api api = new Retrofit.Builder()
-            .baseUrl(Api.URL)
+//.addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+    private final ApiService api = new Retrofit.Builder()
+            .baseUrl(ApiService.URL)
             .client(new OkHttpClient.Builder().build())
             .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
-            .create(Api.class);
+            .create(ApiService.class);
 String suce;
     public void createUsers(String userBody) {
-        Log.i("SUCESSAGEM FINOTII", userBody);
-        api.createUsers(Api.API_KEY, userBody)
+        api.createUsers(ApiService.API_KEY, userBody)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
-                    Log.i("SUCESSAGEM", response.loginEmail);
+                    Log.i("SUCESSAGEM", response.token);
                 });
     }
 }

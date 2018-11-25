@@ -4,15 +4,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.example.helderrocha.routesail.api.ApiService;
+import com.example.helderrocha.routesail.api.Course;
+import com.example.helderrocha.routesail.api.UdacityCatalog;
+import com.example.helderrocha.routesail.api.UdacityService;
 import com.example.helderrocha.routesail.api.UserRest;
 import com.example.helderrocha.routesail.models.User;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class CadastreActivity extends AppCompatActivity {
 
@@ -32,37 +45,53 @@ public class CadastreActivity extends AppCompatActivity {
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextPasswordConfirm =  (EditText) findViewById(R.id.editTextPasswordConfirm);
 
+
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("Helder", "Tocou");
-                String senha;
-                String confimarSenha;
-                String email;
-                senha =  editTextPassword.getText().toString();
-                confimarSenha  = editTextPasswordConfirm.getText().toString();
-                email = editText.getText().toString();
 
-                Log.i("Helder > senha", senha);
-                Log.i("Helder > confimarSenha", confimarSenha);
-                userRest = new UserRest();
-                if(senha.equals(confimarSenha)){
-                    Log.i("Helder > Entrou", "shdiaushdiuash");
+                HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+                interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+                OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
-//                    String body;
-                    JSONObject body = new JSONObject();
-                    try {
-                        body.put("password", senha);
-                        body.put("loginEmail", email);
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl(ApiService.URL)
+                        .client(client)
+                        .addConverterFactory(ScalarsConverterFactory.create())
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
 
-                        Log.i("Helder > body", body.toString());
+                ApiService apiInterface = retrofit.create(ApiService.class);
 
-                        userRest.createUsers(body.toString());
+                // prepare call in Retrofit 2.0
+                try {
+                    JSONObject paramObject = new JSONObject();
+                    paramObject.put("loginEmail", "sKKample@gmail.com");
+                    paramObject.put("password", "Q!w2e3r4");
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+                    Call<User> userCall = apiInterface.criarUsuario(paramObject.toString());
+
+                    userCall.enqueue(new Callback<User>() {
+                        @Override
+                        public void onResponse(Call<User> call, Response<User> response) {
+                            if(response.isSuccessful()) {
+                                Log.i("Finotti", "EUPA:"+ response.code());
+                            } else {
+                                Log.i("Finotti", "Nao roloi:"+ response.code());
+                            }
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<User> call, Throwable t) {
+                            Log.i("Finotti", t.getMessage());
+                        }
+                    });
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
+
+
             }
         });
     }
