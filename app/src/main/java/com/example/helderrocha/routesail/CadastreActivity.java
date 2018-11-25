@@ -1,5 +1,6 @@
 package com.example.helderrocha.routesail;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +8,9 @@ import android.view.View;
 
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.example.helderrocha.routesail.api.ApiService;
 import com.example.helderrocha.routesail.api.Course;
@@ -34,22 +38,24 @@ public class CadastreActivity extends AppCompatActivity {
     private  EditText editTextPassword;
     private  EditText editTextPasswordConfirm;
     private UserRest userRest;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastre_activity);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         buttonSave = (ImageButton) findViewById(R.id.buttonOk);
         editText =  (EditText) findViewById(R.id.editText);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextPasswordConfirm =  (EditText) findViewById(R.id.editTextPasswordConfirm);
-
+        progressBar.setVisibility(View.GONE);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                progressBar.setVisibility(View.VISIBLE);
                 HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
                 interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
                 OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
@@ -66,8 +72,8 @@ public class CadastreActivity extends AppCompatActivity {
                 // prepare call in Retrofit 2.0
                 try {
                     JSONObject paramObject = new JSONObject();
-                    paramObject.put("loginEmail", "sKKample@gmail.com");
-                    paramObject.put("password", "Q!w2e3r4");
+                    paramObject.put("loginEmail", editText.getText().toString());
+                    paramObject.put("password", editTextPassword.getText().toString());
 
                     Call<User> userCall = apiInterface.criarUsuario(paramObject.toString());
 
@@ -75,9 +81,20 @@ public class CadastreActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {
                             if(response.isSuccessful()) {
+                                progressBar.setVisibility(View.GONE);
+                                onBackPressed();
                                 Log.i("Finotti", "EUPA:"+ response.code());
                             } else {
-                                Log.i("Finotti", "Nao roloi:"+ response.code());
+                                progressBar.setVisibility(View.GONE);
+
+                                Context context = getApplicationContext();
+                                CharSequence text = "ERROR: "+ response.code();
+                                int duration = Toast.LENGTH_SHORT;
+
+                                Toast toast = Toast.makeText(context, text, duration);
+                                toast.show();
+
+                                Log.i("Finotti", "Nao rolou:"+ response.code());
                             }
 
                         }

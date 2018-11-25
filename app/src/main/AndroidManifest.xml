@@ -62,7 +62,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".UserActivity" />
-        <activity android:name=".CadastreActivity"></activity>
+        <activity android:name=".CadastreActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
